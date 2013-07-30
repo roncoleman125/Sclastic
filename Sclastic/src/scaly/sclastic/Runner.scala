@@ -1,0 +1,238 @@
+package scaly.cyclomatic
+
+import scaly.sclastic.util.ParserHelper._
+import scaly.sclastic.util.Config._
+import scaly.sclastic.compiler.Parser._
+import scaly.sclastic.compiler.MethodsCompiler._
+import java.util.zip.ZipEntry
+import java.util.zip.ZipFile
+import java.io.PrintWriter
+import java.io.File
+import scala.io.Source
+import scala.collection.mutable.HashMap
+import java.util.Date
+import scaly.sclastic.util.Config
+import scaly.sclastic.util.Statistics
+import scaly.sclastic.util.FileWalker
+import scaly.sclastic.compiler.MethodsCompiler
+import scaly.sclastic.util.Lint
+
+/** This object is the main driver of the experiment. */
+object Runner { 
+  // These are all the counters the program tracks
+  var countRaw = 0
+  var countStripped = 0
+  var passed = 0
+  var failed = 0
+  var totalMethods = 0
+  var count = 0
+  var totalt = 0.0
+    
+  def main(args: Array[String]): Unit = {
+    val begin = System.currentTimeMillis
+
+    // Get the configuration
+    val config = loadConfig(args(0))
+    
+    val root = config("root")
+
+    val report = config("report")
+    
+    val dir = config("workdir")
+
+    // Override settings in the config file with command line settings
+    (1 until args.length-1).foreach ( k => config(args(k)) = args(k+1) )
+    
+    // Open the report file
+    val out = new PrintWriter(new File(report))
+    
+    // Get the list of zips
+    val zips = FileWalker.walk(root, ".zip")
+    
+    val numZips = zips.size
+    
+    // Initialize the complexity distribution
+    val complexities = HashMap[Int,Int]().withDefaultValue(0)
+    
+    // Initialize the line count distribution
+    val lengths = HashMap[Int,Int]().withDefaultValue(0)
+
+    // Process each zip in turn
+    zips.foreach { zip => 
+      
+      val startt = System.currentTimeMillis
+      val starth = Lint.count
+      
+      // Get the name of the zip file without the path
+      val input = zip.split(java.io.File.separator).last
+
+      // Send progress report to user
+      print((numZips-count)+": processing "+input+"...")
+      Console.out.flush
+      
+      out.println("** " + zip)
+      out.flush
+
+      // Open the zip file
+      val rootzip = new ZipFile(zip);
+
+      // Retrieve the zip entries
+      import collection.JavaConverters._
+
+      val entries = rootzip.entries.asScala
+
+      // Process each file in turn in the zip
+      val stats = entries.foldLeft(List[MethodsCompiler.Descriptor]()) { (stats, entry) =>
+        try {
+          // Process an entry in the zip
+          val results = process(entry, rootzip)
+
+          // The process may fail, if we cannot for some reason
+          // cannot parse or compile the uncompressed file
+          results match {
+            case methods: List[Descriptor] if methods != null =>
+              passed += 1
+                            
+              methods.foreach { method =>
+                val m = method.m
+                val len = method.len
+                val name = method.name
+                val struct = method.struct
+                val path = method.path
+                
+                if (len > 0) {
+                  out.println("| %2d %3d %18.18s %20.20s %s %s".format(m, len, name, struct, path, input))
+                  out.flush
+
+                  complexities(m) += 1
+                  lengths(len) += 1
+
+                  totalMethods += 1
+                }
+              }
+              
+              stats ++ methods
+              
+            case _ =>
+              stats
+          }
+          
+        } catch {
+          case e: Exception =>
+            failed += 1
+            out.println("exception in "+entry.getName+": " + e.getMessage)
+//            println("*** FAILED: "+entry.getName)
+            stats
+        }
+      }
+      
+      // Try to compute the stats for a given zip file
+      // The only reason this can fail is for math reasons
+      // e.g., divide by zero, etc.
+      try {
+        val result = Statistics.correla(stats)
+        
+        out.println("++ r = %.2f n = %d m = %.1f +- %.1f len = %.1f +- %.1f".
+            format(result.r,
+                result.n,
+                result.um,
+                Math.sqrt(result.sm),
+                result.ulen,
+                Math.sqrt(result.slen)))
+        out.flush
+
+        count += 1
+        
+        val endh  = Lint.count
+        val dh = endh - starth
+        
+        val endt = System.currentTimeMillis
+
+        val dt = endt - startt
+
+        println("done! r=%4.2f hofs=%d %4.1f s".format(result.r, dh, dt / 1000.0))
+
+        totalt += dt
+      }
+      catch {
+        case e: Exception =>
+          println("exception processing "+zip+": "+e.getMessage())
+      }
+    }
+    
+    out.flush
+    out.close
+    
+    // Write out the summary report
+    println("started: "+new Date(begin))
+    println("elapsed: %.1f min".format(totalt/1000.0/60))
+    
+    config.foreach(setting => println(">> "+setting._1+": "+setting._2))
+
+    println("zips: "+zips.size)
+    
+    println("passed: %d (%.1f%%)".format(passed,passed.toDouble/(passed + failed)*100.0))
+    println("failed: %d (%.1f%%)".format(failed,failed.toDouble/(passed + failed)*100.0))
+    println("raw: %.1f kloc".format(countRaw/1024.0))
+    println("stripped: %.1f kloc (%.0f%%)".format(countStripped/1024.0,(countStripped-countRaw)/countRaw.toDouble*100))
+    
+    // Read by the file we just wrote out since it may be too
+    // big to fit in memory
+    val r = Statistics.correlFile(report)
+    
+    println("hofs: %d / %d".format(Lint.count,Lint.attempts))
+    
+    println("r: "+r)
+    
+    // Write out the complexity distribution
+    // See http://stackoverflow.com/questions/13675046/scala-sort-list-of-tuples-by-attribute
+    val ccsorted = complexities.toList.sorted.groupBy(_._2).values.map(_.head).toList.sorted
+    
+    println("%3s %7s %6s".format("cc","n","%"))
+    
+    ccsorted.foreach { cc =>
+      println("%3d %7d %6.1f".format(cc._1,cc._2,cc._2/totalMethods.toDouble*100.0))
+    }
+    
+    // Write out the length distribution
+    println
+    println("%4s %7s %6s".format("len","n","%"))
+    
+    val lensorted = lengths.toList.sorted.groupBy(_._2).values.map(_.head).toList.sorted
+    lensorted.foreach { len =>
+      println("%4d %7d %6.1f".format(len._1,len._2,len._2/totalMethods.toDouble*100.0))
+    }
+    
+    println("DONE")
+  }
+
+  /** Uncompress and process a given Scala file */
+  def process(e: ZipEntry, rootzip: ZipFile): List[Descriptor] = {
+    val name = e.getName
+        
+    name.split(java.io.File.separator).last match {
+      case "t6726-patmat-analysis.scala" =>
+        null
+        
+      case path: String if name.endsWith(".scala") =>
+        if(Config.debug) println("processing: "+path)
+        
+        val is = rootzip.getInputStream(e)
+
+        val raw = scala.io.Source.fromInputStream(is).getLines().toList
+        countRaw += raw.size
+
+        val delines = dede(raw)
+        countStripped += delines.size
+
+        val methods = Rockit.estimate(path, delines)
+        
+        is.close
+        
+        methods
+        
+      case _ =>
+        null
+    }
+  }
+}
