@@ -1,0 +1,3 @@
+root /Users/roncoleman125/Marist/Research/ScalaComplexity/scala-book/
+report /Users/roncoleman125/Marist/Research/ScalaComplexity/scala-book/report.txt
+wd /Users/roncoleman125/Marist/Research/ScalaComplexity/scala-book/

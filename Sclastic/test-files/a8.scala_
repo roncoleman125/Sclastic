@@ -1,0 +1,7 @@
+class B {
+  val TWO = 2
+  def evens(list: List[Int]): List[Int] = {
+    def iseven(a: Int): Boolean = a % TWO == 0
+    list.filter(p => iseven(p))
+  }
+}

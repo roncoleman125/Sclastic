@@ -1,0 +1,18 @@
+package mypackage {
+class A {
+def fixDown(heap: Array[T], m: Int, n: Int): Unit = {
+  var k: Int = m
+  while (n >= 2*k) {
+    var j = 2*k
+    if (j < n && heap(j) < heap(j + 1))
+      j += 1
+    if (heap(k) >= heap(j))
+      return
+    else {
+      swap(heap, k, j)
+      k = j
+    }
+  }
+}
+}
+}

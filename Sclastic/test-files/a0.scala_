@@ -1,0 +1,6 @@
+class A {
+  def foo = if(0) true else false
+  def bar = true
+  val a = 1
+  val b = 2
+}

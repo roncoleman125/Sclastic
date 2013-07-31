@@ -1,0 +1,7 @@
+class A {
+  def foo =
+    List(1,2,3).
+      foreach("println")
+    
+  println("bar")
+}

@@ -1,0 +1,16 @@
+package mypackage
+
+class A {
+  def awaitTermination(timeout: Long, unit: TimeUnit): Boolean = {
+    if (threads.exists(_ eq Thread.currentThread())) terminations.countDown() // don't hang up due call in task
+    terminations.await(timeout, unit)
+  }
+  /*
+  private def drainTo(ts: java.util.List[Runnable], n: TaskNode): java.util.List[Runnable] =
+    if (n eq null) ts
+    else {
+      ts.add(n.task)
+      drainTo(ts, n.get)
+    }
+    */
+}

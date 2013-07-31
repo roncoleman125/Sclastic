@@ -1,0 +1,10 @@
+class A {
+  def foo {
+    def bar {
+      a
+      b
+      c
+      val d = if(a || d) b else c
+    }
+  }
+}

@@ -1,0 +1,6 @@
+class C {
+   def evens(list: List[Int]): List[Int] =
+     list.filter { p => 
+         p % 2 == 0
+     }
+}

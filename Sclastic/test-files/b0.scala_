@@ -1,0 +1,5 @@
+class A {
+	val  filter = ( predicate :Int => Boolean, xs :List[Int] )  =>  {
+    	for(  x <- xs;  if predicate( x )  )  yield x
+	}
+}

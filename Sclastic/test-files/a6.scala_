@@ -1,0 +1,7 @@
+package mypackage
+
+// See a5.scala_ for a more real-world example
+class A {
+  def foo = "http://hello"
+  def bar = "http://bar"
+}

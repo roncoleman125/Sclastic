@@ -1,0 +1,10 @@
+package mypackage
+
+class A {
+  def foo = try {
+    do-something
+  } catch {
+    case e1: Exception =>
+      handle-something
+  }
+}

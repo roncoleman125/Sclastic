@@ -1,0 +1,39 @@
+package mypackage
+class A {
+  def foo = {
+  	try {
+  	  if(e)
+  	    bar
+  	}
+  	catch {
+  	  case t: Throwable => doSomethingT
+  	  case u: Throwable =>
+  	    try {
+  	      if(d)
+  	        bar
+  	    }
+  	    catch {
+  	      case s: Throwable => doSomethingS
+  	      case v: Throwable => doSomethingV
+  	      case w: Throwable => doSomethingW
+  	    }
+  	}
+  	try {
+  	  if(e)
+  	    bar
+  	}
+  	catch {
+  	  case t: Throwable => doSomethingT
+  	  case u: Throwable =>
+  	    try {
+  	      if(d)
+  	        bar
+  	    }
+  	    catch {
+  	      case s: Throwable => doSomethingS
+  	      case v: Throwable => doSomethingV
+  	      case w: Throwable => doSomethingW
+  	    }
+  	}
+  }
+}

@@ -1,0 +1,24 @@
+package com.mongodb.casbah
+import scala.collection.JavaConverters._
+object WriteConcern {
+  val None = com.mongodb.WriteConcern.NONE
+  val Normal = com.mongodb.WriteConcern.NORMAL
+  val Safe = com.mongodb.WriteConcern.SAFE
+  val Majority = com.mongodb.WriteConcern.MAJORITY
+  val FsyncSafe = com.mongodb.WriteConcern.FSYNC_SAFE
+  val JournalSafe = com.mongodb.WriteConcern.JOURNAL_SAFE
+  val ReplicasSafe = com.mongodb.WriteConcern.REPLICAS_SAFE
+  def apply(w: Int,
+            wTimeout: Int = 0,
+            fsync: Boolean = false,
+            j: Boolean = false,
+            continueInsertOnError: Boolean = false) =
+    new com.mongodb.WriteConcern(w, wTimeout, fsync, j, continueInsertOnError)
+  def withRule(w: String,
+               wTimeout: Int = 0,
+               fsync: Boolean = false,
+               j: Boolean = false,
+               continueInsertOnError: Boolean = false) =
+    new com.mongodb.WriteConcern(w, wTimeout, fsync, j, continueInsertOnError)
+  def valueOf(name: String) = com.mongodb.WriteConcern.valueOf(name)
+}

@@ -1,0 +1,4 @@
+root /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/scala
+report /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/scala-report.txt
+workdir /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/
+hofs /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/github-hofs.txt

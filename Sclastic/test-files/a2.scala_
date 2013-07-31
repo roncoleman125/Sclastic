@@ -1,0 +1,18 @@
+class A {
+  def count = 5
+  def foo0 = count()
+  def foo1 = list.count(p => true)
+  def foo2 = list.count { p => true }
+  def foo3 = filter
+  def filter = count
+  def foo4 = if(a) b else c
+  def foo5 = list.count { p =>
+    true
+  }
+  def foo6 = list.count { p =>
+    if(true) false else true
+  }
+  def foo7 = list.count ( p =>
+    true
+  )
+}

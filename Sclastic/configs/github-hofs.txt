@@ -1,0 +1,1187 @@
+findByName:#    def findByName: Component[_, _] => Boolean = _.name == compName#ApplicationService.scala
+ggOpt2#  def ggOpt2(dim0:Int, op2:(T,T) => Boolean):(DenseMat[T],IMat) = {#DenseMat.scala
+filter#        def filter(gpf: Vertex => Boolean):GremlinPipeline[Vertex, Vertex] = {#BlueprintsWrapper.scala
+filter#        def filter(gpf: Edge => Boolean):GremlinPipeline[Vertex, Edge] = {#BlueprintsWrapper.scala
+filter#  def filter(f: A => Boolean) = flatMap {a =>#Rule.scala
+cond#  def cond(f: S => Boolean) = get filter f#Rules.scala
+repeatUntil#  def repeatUntil[T, X](rule: Rule[T => T, X])(finished: T => Boolean)#Rules.scala
+cleanupResources#  def cleanupResources(filter: Resource => Boolean)#CleanupManager.scala
+cleanupResources#  def cleanupResources(filter: Resource => Boolean) {#CleanupManagerImpl.scala
+iterator#      override def iterator(md:Map[String, String], smd:Map[String, String], filter:(Resource) => Boolean):StorageIterator#QueryManagerTestCase.scala
+iterator#      override def iterator(md:Map[String, String], smd:Map[String, String], filter:(Resource) => Boolean):StorageIterator#StorageUpdateTaskTestCase.scala
+createUserMetaFilter#  private def createUserMetaFilter(map:Map[String, String]):(Resource) => Boolean =#BDBStorageIterator.scala
+createSystemMetaFilter#  private def createSystemMetaFilter(map:Map[String, String]):(Resource) => Boolean =#BDBStorageIterator.scala
+createMetadataFilter#  private def createMetadataFilter(map: Map[String, String], isSystem: Boolean): (Resource) => Boolean = {#BDBStorageIterator.scala
+filterChildren#  def filterChildren(f: SectionChildSpec => Boolean): SectionSpec = {#VariableAndSectionSpec.scala
+forAllSubDirs#      def forAllSubDirs[B](root: File, p: File => Boolean): Boolean = {#TestPackageReader.scala
+Where#  def Where(predicate: TSource => Boolean) =  {#OptiQL.scala
+Where#  def Where(predicate: (TSource, Int) => Boolean) = {#OptiQL.scala
+filter#  override def filter(p: TSource => Boolean ) = {#DataTable.scala
+filter#  def filter(p: A => Boolean): Queryable[A]#OldQueryable.scala
+takeWhile#  def takeWhile(pred: (A) => Boolean): Queryable[A] = {#OldQueryable.scala
+skipWhile#  def skipWhile(pred: (A) => Boolean): Queryable[A] = {#OldQueryable.scala
+withFilter#  def withFilter(p: ArrayDeque[DeliteOP] => Boolean) = resources.withFilter(p)#StaticSchedule.scala
+generateNew#  def generateNew(base: String, suffix: String, exists: (String) => Boolean): String = {#Payload.scala
+allWithSnapshot#    def allWithSnapshot(snapshotFilter: SnapshotMetadata => Boolean): Seq[ReplayParams] =#EventsourcingExtension.scala
+snapshotFilter:#  def snapshotFilter: SnapshotMetadata => Boolean#ReplayParams.scala
+apply#  def apply(processorId: Int, snapshotFilter: SnapshotMetadata => Boolean): ReplayParams =#ReplayParams.scala
+apply#  def apply(processorId: Int, snapshotFilter: SnapshotMetadata => Boolean, toSequenceNr: Long): ReplayParams =#ReplayParams.scala
+snapshotFilter:#    def snapshotFilter: SnapshotMetadata => Boolean =#ReplayParams.scala
+loadSnapshot#    def loadSnapshot(processorId: Int, snapshotFilter: SnapshotMetadata => Boolean): Future[Option[Snapshot]]#AsynchronousWriteReplaySupport.scala
+loadSnapshot#    private def loadSnapshot(processorId: Int, snapshotFilter: SnapshotMetadata => Boolean): Future[Option[Snapshot]] = {#AsynchronousWriteReplaySupport.scala
+loadSnapshot#  def loadSnapshot(processorId: Int, snapshotFilter: SnapshotMetadata => Boolean): Option[Snapshot]#SynchronousWriteReplaySupport.scala
+loadSnapshot#  def loadSnapshot(processorId: Int, snapshotFilter: SnapshotMetadata => Boolean): Option[Snapshot] = {#LocalFilesystemSnapshotting.scala
+loadSnapshot#    def loadSnapshot(processorId: Int, snapshotFilter: (SnapshotMetadata) => Boolean) =#HBaseJournal.scala
+loadSnapshot#  def loadSnapshot(processorId: Int, snapshotFilter: SnapshotMetadata => Boolean): Future[Option[Snapshot]] =#HadoopFilesystemSnapshotting.scala
+loadSnapshot#    def loadSnapshot(processorId: Int, snapshotFilter: SnapshotMetadata => Boolean): Option[Snapshot] = {#HadoopFilesystemSnapshotting.scala
+loadSnapshot#  override def loadSnapshot(processorId: Int, snapshotFilter: SnapshotMetadata => Boolean) = for {#InmemJournal.scala
+loadSnapshot#  def loadSnapshot(processorId: Int, snapshotFilter: (SnapshotMetadata) => Boolean) = None#MongodbCasbahJournal.scala
+splitWith#    def splitWith(condition: (A, A) => Boolean): Seq[Seq[A]] = split(seq)(condition)#Implicits.scala
+split#    private def split[A](list: Seq[A], result: Seq[Seq[A]] = Nil)(condition: (A, A) => Boolean): Seq[Seq[A]] = {#Implicits.scala
+createFilter#	private def createFilter(cond: MQLValueCondition): (TimedValue) => Boolean = {#MQLExecutor.scala
+sortWith#	def sortWith(lt: (A, A) => Boolean): TimeWindowMap[A, B] = {#TimeWindowHashMap.scala
+span#	def span(p: ((A,B)) => Boolean): (TimeWindowMap[A, B], TimeWindowMap[A, B]) = {#TimeWindowHashMap.scala
+sortWith#	 def sortWith(lt: (A, A) => Boolean): TimeWindowMap[A, B]#TimeWindowMap.scala
+span#	 def span(p: ((A,B)) => Boolean): (TimeWindowMap[A, B], TimeWindowMap[A, B])#TimeWindowMap.scala
+sortWith#	def sortWith(lt: (A, A) => Boolean): TimeWindowMap[A, B] = this#TimeWindowSortedMap.scala
+span#	def span(p: ((A,B)) => Boolean): (TimeWindowMap[A, B], TimeWindowMap[A, B]) = {#TimeWindowSortedMap.scala
+takeWhileInclusive#    def takeWhileInclusive(predicate:(T) => Boolean) = {#Extensions.scala
+whileDo#  def whileDo(cond: => Boolean, body: => Unit) =#InScala.scala
+array_filter#  def array_filter[T:Manifest](a: Array[T], block: T => Boolean): Array[T] = a.filter(block)#InScala.scala
+__whileDo#  override def __whileDo(cond: => Boolean, body: => Unit)(implicit pos: SourceContext) = OriginalOps.whileDo(cond, body)#InScala.scala
+array_filter#  def array_filter[T:Manifest](a: Array[T], block: T => Boolean): Array[T] = OriginalOps.array_filter(a, block)#InScala.scala
+range_filter#  def range_filter(r: Range, block: Int => Boolean): Array[Int] = (r.a to r.b).filter(block).toArray#InScala.scala
+list_filter#  def list_filter[A](l: List[A], f: A => Boolean)(implicit mA: Manifest[A], pos: SourceContext) = l.filter(f)#InScala.scala
+element_closest_reified:#  def element_closest_reified: Exp[((Element, Element => Boolean)) => Option[Element]] =#ElementOpsExp.scala
+element_prev_reified:#  def element_prev_reified: Exp[((Element, Element => Boolean)) => Option[Element]] =#ElementOpsExp.scala
+main#      def main(f: Rep[Int => Option[Int]], p: Rep[Int => Boolean], x: Rep[Int]) = rec(f, p, x)#TestOptionOps.scala
+filter#	def filter(f: (Contact) => Boolean) : Set[Contact] = {#Bucket.scala
+markDeletedWhile#  def markDeletedWhile(predicate: LogSegment => Boolean): Seq[LogSegment] = {#Log.scala
+getMap#  def getMap(name: String, valid: String => Boolean): Map[String, String] = {#VerifiableProperties.scala
+waitUntilTrue#  def waitUntilTrue(condition: () => Boolean, waitTime: Long): Boolean = {#TestUtils.scala
+stopIf#  def stopIf(f: => Boolean) {#PeriodicSyncFile.scala
+filter#  def filter(f : A => Boolean) : Option[A]#Option.scala
+filter#    def filter[A](l : List[A])(f : A => Boolean) : List[A]#ListAlgebra.scala
+isSorted#def isSorted[a](xs: Array[a], gt: (a, a) => Boolean): Boolean = {#Ch1Ex.scala
+dropWhile#def dropWhile[a](_xs: List[a])(p: a => Boolean): List[a] =#List.scala
+findMailboxItem#  private def findMailboxItem(start: MailboxItem, f: MailboxItem => Boolean): Box[MailboxItem] =#LiftActor.scala
+testTranslate#  protected def testTranslate(f: T => Boolean)(v: T): Boolean = f(v)#LiftActor.scala
+testTranslate#  override protected def testTranslate(f: Any => Boolean)(v: Any) = v match {#LiftActor.scala
+exists#  override def exists(func: A => Boolean): Boolean = func(value)#Box.scala
+filter#  override def filter(p: A => Boolean): Box[A] = if (p(value)) this else Empty#Box.scala
+findDirect#    private def findDirect(xs: List[JValue], p: JValue => Boolean): List[JValue] = xs.flatMap {#JsonAST.scala
+find#    def find(p: JValue => Boolean): Option[JValue] = {#JsonAST.scala
+filter#    def filter(p: JValue => Boolean): List[JValue] =#JsonAST.scala
+remove#    def remove(p: JValue => Boolean): JValue = this map {#JsonAST.scala
+boolean2#  implicit def boolean2(b: => Boolean) = new Boolean2(b)#BasicTypesHelpers.scala
+toOptiCons#  implicit def toOptiCons(expr: => Boolean): OptionalCons = new OptionalCons(expr)#BasicTypesHelpers.scala
+walk#      def walk(in: Input)(f: Char => Boolean): Input = {#CSSHelpers.scala
+findElems#  def findElems(nodes: NodeSeq)(f: Elem => Boolean): NodeSeq = {#HttpHelpers.scala
+first_?#  def first_?[B](in: Seq[B])(f: => B => Boolean): Box[B] =#ListHelpers.scala
+remove#  private[http] def remove(f: T => Boolean) {#LiftRules.scala
+allElems#  private def allElems(in: NodeSeq, f: Elem => Boolean): List[Elem] = {#LiftSession.scala
+attrsToMetaData#  def attrsToMetaData(predicate: String => Boolean): MetaData = {#S.scala
+currentAttrsToMetaData#  def currentAttrsToMetaData(predicate: String => Boolean): MetaData = {#S.scala
+filter#    def filter(f: ChoiceItem[T] => Boolean) = items.filter(f)#SHtml.scala
+from#    def from(f: Boolean => Any): List[String] => Boolean = (in: List[String]) => {#SHtml.scala
+from#    def from(f: Boolean => Any): List[String] => Boolean = (in: List[String]) => {#SHtml.scala
+buildMenuMatcher#  def buildMenuMatcher(matchFunc: Loc.LocParam[_] => Boolean): UnapplyLocMatcher = new UnapplyLocMatcher {#SiteMap.scala
+filter#  def filter(f: TransactionMonad => Boolean): TransactionMonad =#TransactionContext.scala
+filter#    override def filter(f: TransactionMonad => Boolean): TransactionMonad = this#TransactionContext.scala
+guard#    def guard(gurd: (MyType, StV, StV, Meta#Event) => Boolean): this.type = {_guard = gurd :: _guard; this}#ProtoStateMachine.scala
+xmlMatch#  def xmlMatch(findFunc: Elem => NodeSeq, filterFunc: Node => Boolean): Boolean =#TestFramework.scala
+enclosed#    def enclosed(delim: Char, what: String, pred: Char => Boolean) = delim ~> str(what, {c => c != delim && pred(c)}) <~ delim#TextileParser.scala
+str#    def str(what: String, pred: Char => Boolean) = rep(elem(what, pred)) ^^ mkString#TextileParser.scala
+str1#    def str1(what: String, pred: Char => Boolean) = rep1(elem(what, pred)) ^^ mkString#TextileParser.scala
+dw#      def dw[A](in: List[A])(f: A => Boolean): List[A] = in match {#TextileParser.scala
+addCondition#    def addCondition(c: Int => Boolean): Values = new Values(ranges, values, conditions + c, name, isSeq, actualSize)#AbstractInterpretation.scala
+addConditions#    def addConditions(c: (Int => Boolean)*): Values = new Values(ranges, values, conditions ++ c, name, isSeq, actualSize)#AbstractInterpretation.scala
+addConditions#    def addConditions(c: Set[Int => Boolean]): Values = new Values(ranges, values, conditions ++ c, name, isSeq, actualSize)#AbstractInterpretation.scala
+filter#  override def filter(predicate : ((String, Any)) => Boolean) =#Attributes.scala
+handleCodesSuchThat#    def handleCodesSuchThat(check: HttpResponseCode => Boolean)#ResponseHandlerDSL.scala
+emptyHandlerList#    private def emptyHandlerList[Failure,Success] = List[(HttpResponseCode => Boolean, HttpResponse => Validation[Failure, Success])]()#package.scala
+handleCodesSuchThat#    def handleCodesSuchThat[Failure, Success](check: HttpResponseCode => Boolean)#package.scala
+withFilter#  override def withFilter(p: (Option[Message]) => Boolean): ReplicationSourceIterator = {#ReplicationSourceIterator.scala
+resolve#  def resolve(token: Long, count: Int, filter: (RingNode => Boolean)): Seq[RingNode] = {#Ring.scala
+resolveMembers#  def resolveMembers(token: Long, count: Int, filter: ServiceMember => Boolean): Seq[ServiceMember] = {#Service.scala
+waitForCondition#  def waitForCondition[T](block: () => T, condition: (T) => Boolean, sleepTimeInMs: Long = 250, timeoutInMs: Long = 10000) {#HttpClientOperations.scala
+waitForCondition#  def waitForCondition[T](block: => T, condition: (T) => Boolean, sleepTimeInMs: Long = 250, timeoutInMs: Long = 15000) {#TestZookeeperClusterManager.scala
+waitForCondition#  def waitForCondition[T](block: => T, condition: (T) => Boolean, sleepTimeInMs: Long = 250, timeoutInMs: Long = 10000) {#ZookeeperTestingClusterDriver.scala
+hasPermission#  def hasPermission(bankAccount: BankAccount, permissionCheck: (Privilege) => Boolean): Boolean = {#OBPUser.scala
+runWhile#  def runWhile(p: T => Boolean)(deltaT: Double): T =#Steppable.scala
+runWhileCallback#  def runWhileCallback(callback: (T, T) => Boolean)(deltaT: Double): T = {#Steppable.scala
+filter#  def filter(predicate: In => Boolean) = {#MapOperator.scala
+maybeVerbosely#    def maybeVerbosely[T](guard: T => Boolean)(obs: T => String)(block: => T): T = {#Logger.scala
+count#    def count(p: Double => Boolean): Int = {#Iterable.scala
+filter#    def filter(p: Double => Boolean): Iterable = {#Iterable.scala
+filterNot#    def filterNot(p: Double => Boolean): Iterable = filter(!p(_))#Iterable.scala
+partition#    def partition(p: Double => Boolean): (Iterable, Iterable) = {#Iterable.scala
+forall#    def forall(p: Double => Boolean): Boolean = {#Iterable.scala
+exists#    def exists(p: Double => Boolean): Boolean = !forall(!p(_))#Iterable.scala
+find#    def find(p: Double => Boolean): Option[Double] = {#Iterable.scala
+takeWhile#    def takeWhile(p: Double => Boolean): Iterable = {#Iterable.scala
+dropWhile#    def dropWhile(p: Double => Boolean): Iterable = {#Iterable.scala
+span#    def span(p: Double => Boolean): (Iterable, Iterable) = {#Iterable.scala
+sortWith#    def sortWith(f: (Double, Double) => Boolean): Iterable = newInstance#Seq.scala
+indexWhere#    def indexWhere(p: Double => Boolean, from: Int = 0): Int = {#Seq.scala
+scanModuleOrFieldByReflection#  def scanModuleOrFieldByReflection(instance: Any, sym: Symbol)(checkSymbol: Symbol => Boolean)(implicit mirror: JavaMirror): List[(Any, Symbol)] = {#SlickPlugin.scala
+filter#  def filter[EE >: E](p: A => Boolean, error: EE): MayErr[EE, A] = MayErr(e.right.filter(p).getOrElse(Left(error)))#Utils.scala
+filter#  def filter[E](predicate: E => Boolean)(implicit ec: ExecutionContext): Enumeratee[E, E] = new CheckDone[E, E] {#Enumeratee.scala
+filterNot#  def filterNot[E](predicate: E => Boolean)(implicit ec: ExecutionContext): Enumeratee[E, E] = filter[E](e => !predicate(e))(ec)#Enumeratee.scala
+dropWhile#  def dropWhile[E](p: E => Boolean)(implicit ec: ExecutionContext): Enumeratee[E, E] = {#Enumeratee.scala
+takeWhile#  def takeWhile[E](p: E => Boolean)(implicit ec: ExecutionContext): Enumeratee[E, E] = {#Enumeratee.scala
+breakE#  def breakE[E](p: E => Boolean)(implicit ec: ExecutionContext) = new Enumeratee[E, E] {#Enumeratee.scala
+splitOnceAt#  def splitOnceAt[M, E](p: E => Boolean)(implicit traversableLike: M => scala.collection.TraversableLike[E, M], ec: ExecutionContext): Enumeratee[M, M] = new CheckDone[M, M] {#TraversableIteratee.scala
+filterNot#  def filterNot[A](error: ValidationError)(p: A => Boolean)(implicit reads: Reads[A]) =#JsConstraints.scala
+filter#  def filter[A](otherwise: ValidationError)(p: A => Boolean)(implicit reads: Reads[A]) =#JsConstraints.scala
+verifying#  def verifying[A](cond: A => Boolean)(implicit rds: Reads[A]) =#JsConstraints.scala
+verifyingIf#  def verifyingIf[A](cond: A => Boolean)(subreads: Reads[_])(implicit rds: Reads[A]) =#JsConstraints.scala
+filterNot#  def filterNot(error: ValidationError)(p: A => Boolean): JsResult[A] =#JsResult.scala
+filterNot#  def filterNot(p: A => Boolean): JsResult[A] =#JsResult.scala
+filter#  def filter(p: A => Boolean): JsResult[A] =#JsResult.scala
+filter#  def filter(otherwise: ValidationError)(p: A => Boolean): JsResult[A] =#JsResult.scala
+withFilter#  def withFilter(p: A => Boolean) = new WithFilter(p)#JsResult.scala
+withFilter#    def withFilter(q: A => Boolean) = new WithFilter(a => p(a) && q(a))#JsResult.scala
+filter#  def filter(f: A => Boolean): Reads[A] =#Reads.scala
+filter#  def filter(error: ValidationError)(f: A => Boolean): Reads[A] =#Reads.scala
+filterNot#  def filterNot(f: A => Boolean): Reads[A] =#Reads.scala
+filterNot#  def filterNot(error: ValidationError)(f: A => Boolean): Reads[A] =#Reads.scala
+verifying#  def verifying(constraint: (T => Boolean)): Mapping[T] = verifying(##, constraint)#Form.scala
+verifying#  def verifying(error: => String, constraint: (T => Boolean)): Mapping[T] = {#Form.scala
+filter#  def filter(p: A => Boolean): Future[A] = null#Promise.scala
+when#    def when[A](predicate: RequestHeader => Boolean, parser: BodyParser[A], badResult: RequestHeader => Result): BodyParser[A] = {#ContentTypes.scala
+when#      def when(predicate: => Boolean) = {#FakeRuntime.scala
+when#      def when(predicate: => Boolean) = {#ScalaTemplate.scala
+getFileAsStr#  private def getFileAsStr(filename:String,filterFn: String => Boolean= (_ => true) ):String={#Source.scala
+myAssert#        def myAssert(predicate: () => Boolean) =#ByNameParameters.scala
+byNameAssert#        def byNameAssert(predicate: => Boolean) =#ByNameParameters.scala
+resolveFile#  def resolveFile(fileUrl: String, filter: File => Boolean): Option[File]#PubletFilesystem.scala
+resolveFile#  def resolveFile(fileUrl: String, filter: File => Boolean): Option[File] = {#PubletFilesystemImpl.scala
+findMethods#  def findMethods(c: Class[_], f: Method => Boolean): List[Method] = {#ReflectionUtil.scala
+findFields#  def findFields(c: Class[_], f: Field => Boolean): List[Field] = {#ReflectionUtil.scala
+matchFilename#  def matchFilename(exact: Boolean = false): Path => Boolean = p => {#MessageName.scala
+findByUid#  private def findByUid(comp: Long => Boolean)(line: String) = {#UidDb.scala
+list#    def list(filter: Path => Boolean):Iterable[Path] = {#package.scala
+findFile#    def findFile(filter: Path => Boolean) = {#package.scala
+processMessageReport#  def processMessageReport(filter: NodeReport => Boolean):Seq[MessageReport] ={#ExecutionBatch.scala
+pathComparator#  private[this] def pathComparator(walker:TreeWalk, paths:List[Array[Byte]], test: Array[Byte] => Boolean) = {#GitFindUtils.scala
+getPossibleValues#  def getPossibleValues(filters: (ValueType => Boolean)*): Option[Set[ValueType]]#DirectiveEditor.scala
+getPossibleValues#  def getPossibleValues(filters: (ValueType => Boolean)*): Option[Set[ValueType]] = None #DirectiveFieldEditors.scala
+getPossibleValues#  def getPossibleValues(filters: (ValueType => Boolean)*): Option[Set[ValueType]] = None#DirectiveFieldEditors.scala
+getPossibleValues#  def getPossibleValues(filters: (ValueType => Boolean)*): Option[Set[ValueType]] = Some(valueslabels.map(x => x.value).toSet) #DirectiveFieldEditors.scala
+getPossibleValues#  def getPossibleValues(filters: (ValueType => Boolean)*): Option[Set[ValueType]] = {#DirectiveFieldEditors.scala
+getPossibleValues#  def getPossibleValues(filters: (ValueType => Boolean)*): Option[Set[ValueType]] = None #DirectiveFieldEditors.scala
+getPossibleValues#  def getPossibleValues(filters: (ValueType => Boolean)*): Option[Set[ValueType]] = None #DirectiveFieldEditors.scala
+getPossibleValues#  def getPossibleValues(filters: (ValueType => Boolean)*): Option[Set[ValueType]] = None #DirectiveFieldEditors.scala
+getPossibleValues#  def getPossibleValues(filters: (ValueType => Boolean)*): Option[Set[ValueType]] =#DirectiveFieldEditors.scala
+getPossibleValues#  def getPossibleValues(filters: (ValueType => Boolean)*): Option[Set[ValueType]] = None#DirectiveFieldEditors.scala
+merge#	def merge[T](of: Class[_], self: Seq[T], public: Seq[T], f: T => Seq[api.Definition], splitStatic: Seq[T] => (Seq[T],Seq[T]), isInherited: T => Boolean): Defs =#ClassToAPI.scala
+findAnnotations#	def findAnnotations(as: Seq[Annotation], pred: String => Boolean): Set[String] =#Discovery.scala
+defAnnotations#	def defAnnotations(s: Structure, pred: String => Boolean): Set[String] =#Discovery.scala
+defAnnotations#	def defAnnotations(defs: Seq[Definition], pred: String => Boolean): Set[String] =#Discovery.scala
+samePending#	private[this] def samePending[T](a: T, b: T)(f: (T,T) => Boolean): Boolean =#SameAPI.scala
+filterExt#	def filterExt(keep: String => Boolean): APIs#APIs.scala
+groupBy#	def groupBy[K](internal: (File) => K, keepExternal: Map[K, String => Boolean]): Map[K, APIs]#APIs.scala
+filterExt#	def filterExt(keep: String => Boolean): APIs = new MAPIs(internal, external.filterKeys(keep))#APIs.scala
+groupBy#	def groupBy[K](f: (File) => K, keepExternal: Map[K, String => Boolean]): Map[K, APIs] =#APIs.scala
+keep#		def keep[T](f: (Relations, T) => Set[_]): T => Boolean = keepFor(newRelations)(f)#Analysis.scala
+keepMap#		def keepMap[T](f: (Relations, T) => Set[_]): Map[K, T => Boolean] =#Analysis.scala
+keepFor#	private def keepFor[T](newRelations: Relations)(f: (Relations, T) => Set[_]): T => Boolean = file => !f(newRelations, file).isEmpty#Analysis.scala
+changes#	def changes(previous: Set[File], current: Set[File], existingModified: File => Boolean): Changes[File] =#Incremental.scala
+externalBinaryModified#	def externalBinaryModified(entry: String => Option[File], analysis: File => Option[Analysis], previous: Stamps, current: ReadStamps, log: Logger)(implicit equivS: Equiv[Stamp]): File => Boolean =#Incremental.scala
+definesClass#	def definesClass(entry: File): String => Boolean =#Locate.scala
+jarDefinesClass#	def jarDefinesClass(entry: File): String => Boolean =#Locate.scala
+directoryDefinesClass#	def directoryDefinesClass(entry: File): String => Boolean =#Locate.scala
+filter#	def filter(prod: File => Boolean, removeSources: Iterable[File], bin: File => Boolean): Stamps#Stamp.scala
+groupBy#	def groupBy[K](prod: Map[K, File => Boolean], sourcesGrouping: File => K, bin: Map[K, File => Boolean]): Map[K, Stamps]#Stamp.scala
+filter#	def filter(prod: File => Boolean, removeSources: Iterable[File], bin: File => Boolean): Stamps =#Stamp.scala
+groupBy#	def groupBy[K](prod: Map[K, File => Boolean], sourcesGrouping: File => K, bin: Map[K, File => Boolean]): Map[K, Stamps] =#Stamp.scala
+apply#	def apply(x: DependencyFilter, y: DependencyFilter, combine: (Boolean, Boolean) => Boolean): DependencyFilter =#DependencyFilter.scala
+fnToModuleFilter#	implicit def fnToModuleFilter(f: ModuleID => Boolean): ModuleFilter = new ModuleFilter { def apply(m: ModuleID) = f(m) }#DependencyFilter.scala
+fnToArtifactFilter#	implicit def fnToArtifactFilter(f: Artifact => Boolean): ArtifactFilter = new ArtifactFilter { def apply(m: Artifact) = f(m) }#DependencyFilter.scala
+fnToConfigurationFilter#	implicit def fnToConfigurationFilter(f: String => Boolean): ConfigurationFilter = new ConfigurationFilter { def apply(c: String) = f(c) }#DependencyFilter.scala
+subDepFilterToFn#	implicit def subDepFilterToFn[Arg](f: SubDepFilter[Arg, _]): Arg => Boolean = f apply _#DependencyFilter.scala
+make#	protected def make(f: Arg => Boolean): Self#DependencyFilter.scala
+combine#	private[this] def combine(o: Self, f: (Boolean, Boolean) => Boolean): Self = make( (m: Arg) => f(this(m), o(m)) )#DependencyFilter.scala
+make#	protected final def make(f: ModuleID => Boolean) = new ModuleFilter { def apply(m: ModuleID) = f(m) }#DependencyFilter.scala
+make#	protected final def make(f: Artifact => Boolean) = new ArtifactFilter { def apply(m: Artifact) = f(m) }#DependencyFilter.scala
+make#	protected final def make(f: String => Boolean) = new ConfigurationFilter { def apply(m: String) = f(m) }#DependencyFilter.scala
+write#	def write(ivy: Ivy, module: ModuleDescriptor, moduleInfo: ModuleInfo, configurations: Option[Iterable[Configuration]], extra: NodeSeq, process: XNode => XNode, filterRepositories: MavenRepository => Boolean, allRepositories: Boolean, output: File): Unit =#MakePom.scala
+write#	def write(ivy: Ivy, module: ModuleDescriptor, moduleInfo: ModuleInfo, configurations: Option[Iterable[Configuration]], includeTypes: Set[String], extra: NodeSeq, process: XNode => XNode, filterRepositories: MavenRepository => Boolean, allRepositories: Boolean, output: File): Unit =#MakePom.scala
+toPom#	def toPom(ivy: Ivy, module: ModuleDescriptor, moduleInfo: ModuleInfo, configurations: Option[Iterable[Configuration]], extra: NodeSeq, filterRepositories: MavenRepository => Boolean, allRepositories: Boolean): XNode =#MakePom.scala
+toPom#	def toPom(ivy: Ivy, module: ModuleDescriptor, moduleInfo: ModuleInfo, configurations: Option[Iterable[Configuration]], includeTypes: Set[String], extra: NodeSeq, filterRepositories: MavenRepository => Boolean, allRepositories: Boolean): XNode =#MakePom.scala
+makeRepositories#	def makeRepositories(settings: IvySettings, includeAll: Boolean, filterRepositories: MavenRepository => Boolean) =#MakePom.scala
+neNull:#	private[this] def neNull: AnyRef => Boolean = _ ne null#Configuration.scala
+#class#	private final class ArtifactFilter(f: IArtifact => Boolean) extends Filter {#Update.scala
+spec#	private def spec(f: => Boolean): Prop = Prop { _ => Result(if(f) True else False) }#LocksTest.scala
+forkFold#	private def forkFold(n: Int)(impl: Int => Boolean): Boolean =#LocksTest.scala
+forkWait#	private def forkWait(n: Int)(impl: Int  => Boolean): Iterable[Boolean] =#LocksTest.scala
+filterSources#	def filterSources(f: File => Boolean, doCompile: Gen): Gen = (sources, classpath, outputDirectory, options, maxErrors, log) =>#RawCompileLike.scala
+aliases#	def aliases(s: State, pred: (String,String) => Boolean): Seq[(String,String)] =#BasicCommands.scala
+#class#	private[sbt] final class Plugins(val include: Plugin => Boolean) extends AddSettings#AddSettings.scala
+#class#	private[sbt] final class DefaultSbtFiles(val include: File => Boolean) extends AddSettings#AddSettings.scala
+plugins#	def plugins(include: Plugin => Boolean): AddSettings = new Plugins(include)#AddSettings.scala
+excludeKeys#	private[this] def excludeKeys(keys: Set[AttributeKey[_]]): Setting[_] => Boolean =#Cross.scala
+testQuickFilter:#	def testQuickFilter: Initialize[Task[Seq[String] => Seq[String => Boolean]]] =#Defaults.scala
+selectedFilter#	def selectedFilter(args: Seq[String]): Seq[String => Boolean] =#Defaults.scala
+fstS#	private[this] def fstS(f: String => Boolean): ((String,Int)) => Boolean = { case (s,i) => f(s) }#EvaluateConfigurations.scala
+or#	private[this] def or[A](a: A => Boolean, b: A => Boolean): A => Boolean = in => a(in) || b(in)#EvaluateConfigurations.scala
+groupedLines#	def groupedLines(lines: Seq[(String,Int)], delimiter: String => Boolean, skipInitial: String => Boolean): Seq[(String,LineRange)] =#EvaluateConfigurations.scala
+showSettingLike#	def showSettingLike(command: String, preamble: String, cutoff: Int, keep: AttributeKey[_] => Boolean) =#Main.scala
+showSettingParser#	def showSettingParser(keepKeys: AttributeKey[_] => Boolean)(s: State): Parser[(Int, Option[String])] =#Main.scala
+selectedParser#	def selectedParser(s: State, keepKeys: AttributeKey[_] => Boolean): Parser[String] =#Main.scala
+apply#			private[sbt] def apply(data: Data): Scope => Boolean =#ScopeFilter.scala
+apply#		private[sbt] def apply(data: Data): ScopeAxis[T] => Boolean =#ScopeFilter.scala
+selectAxis#	private[this] def selectAxis[T](f: Data => T => Boolean): AxisFilter[T] = new AxisFilter[T] {#ScopeFilter.scala
+apply#		private[sbt] def apply(data: Data): ScopeAxis[T] => Boolean = {#ScopeFilter.scala
+apply#		private[sbt] def apply(data: Data): In => Boolean#ScopeFilter.scala
+apply#			private[sbt] def apply(data: Data): In => Boolean = {#ScopeFilter.scala
+apply#			private[sbt] def apply(data: Data): In => Boolean = {#ScopeFilter.scala
+apply#			private[sbt] def apply(data: Data): In => Boolean = {#ScopeFilter.scala
+saveSomeSettings#	def saveSomeSettings(s: State)(include: ProjectRef => Boolean): State =#SessionSettings.scala
+inputScopedKey#		def inputScopedKey(pred: AttributeKey[_] => Boolean): Parser[ScopedKey[_]] =#SettingCompletions.scala
+keyFilter#	def keyFilter(definingKey: AttributeKey[_]): AttributeKey[_] => Boolean =#SettingCompletions.scala
+completeSelectDescribed#	def completeSelectDescribed[T](seen: String, level: Int, all: Map[String,T], detailLimit: Int)(description: T => Option[String])(prominent: (String, T) => Boolean): Seq[Completion] =#SettingCompletions.scala
+#class#	private[this] final class Custom(f: TagMap => Boolean) extends Rule {#Tags.scala
+predicate#	def predicate(rules: Seq[Rule]): TagMap => Boolean = m => {#Tags.scala
+customLimit#	def customLimit(f: TagMap => Boolean): Rule = new Custom(f)#Tags.scala
+excl#	private[this] def excl(tag: Tag): TagMap => Boolean = predicate(exclusive(tag) :: Nil)#TagsTest.scala
+pomIncludeRepository#	def pomIncludeRepository(base: File, prev: MavenRepository => Boolean) = (r: MavenRepository) =>#PomRepoTest.scala
+#class#private[test] final class ListTests(baseDirectory: File, accept: ScriptedTest => Boolean, log: Logger) extends NotNull#ScriptedTests.scala
+tagged#	def tagged[A](get: A => TagMap, validF: TagMap => Boolean): ConcurrentRestrictions[A] =#ConcurrentRestrictions.scala
+onOpt#			def onOpt[T](o: Option[T])(f: T => Boolean) = o match { case None => false; case Some(x) => f(x) }#Execute.scala
+tagged#	def tagged(f: TagMap => Boolean) = tagged0[Task[_]](_.tags, f)#TaskSerial.scala
+collectDefs#	def collectDefs(tree: Tree, isWrapper: (String, Type, Tree) => Boolean): collection.Set[Symbol] = #ContextUtil.scala
+checkReferences#	def checkReferences(defs: collection.Set[Symbol], isWrapper: (String, Type, Tree) => Boolean): Tree => Unit = {#ContextUtil.scala
+asPredicate#	def asPredicate(c: Context): (String, c.Type, c.Tree) => Boolean =#Convert.scala
+this#	def this(parentA: ClassLoader, aOnly: String => Boolean, parentB: ClassLoader, bOnly: String => Boolean) =#DualLoader.scala
+#class#	private[Init] final class DerivedSetting[T](sk: ScopedKey[T], i: Initialize[T], p: SourcePosition, val filter: Scope => Boolean, val trigger: AttributeKey[_] => Boolean, id: Long) extends DefaultSetting[T](sk, i, p, id) {#Settings.scala
+installCustomCompletor#	def installCustomCompletor(complete: (ConsoleReader, Int) => Boolean, reader: ConsoleReader): Unit =#JLineCompletion.scala
+#class#	private[this] final class CustomHandler(completeImpl: (ConsoleReader, Int) => Boolean) extends CompletionHandler#JLineCompletion.scala
+customCompletor#	def customCompletor(f: (String, Int) => (Seq[String], Seq[String])): (ConsoleReader, Int) => Boolean =#JLineCompletion.scala
+filter#	def filter(f: A => Boolean, msg: String => String): Parser[A]#Parser.scala
+filter#		def filter(f: T => Boolean, msg: => String): Result[T]#Parser.scala
+filter#		def filter(f: T => Boolean, msg: => String): Result[T] = if(f(value)) this else mkFailure(msg)#Parser.scala
+filter#		def filter(f: Nothing => Boolean, msg: => String) = this#Parser.scala
+filterParser#	def filterParser[T](a: Parser[T], f: T => Boolean, seen: String, msg: String => String): Parser[T] =#Parser.scala
+filter#		def filter(f: A => Boolean, msg: String => String): Parser[A] = filterParser(a, f, ##, msg)#Parser.scala
+charClass#	def charClass(f: Char => Boolean, label: String = ##): Parser[Char] = new CharacterClass(f, label)#Parser.scala
+token#	def token[T](t: Parser[T], hide: Int => Boolean): Parser[T] = token(t, TokenCompletions.default.hideWhen(hide))#Parser.scala
+token#	def token[T](t: Parser[T], seen: String, track: Boolean, hide: Int => Boolean): Parser[T] =#Parser.scala
+#class#private final class Filter[T](p: Parser[T], f: T => Boolean, seen: String, msg: String => String) extends ValidParser[T]#Parser.scala
+#class#private final class CharacterClass(f: Char => Boolean, label: String) extends ValidParser[Char]#Parser.scala
+takeRightWhile#	def takeRightWhile(s: String)(pred: Char => Boolean): String =#ProcessError.scala
+hideWhen#	def hideWhen(f: Int => Boolean): TokenCompletions#TokenCompletions.scala
+fnToNameFilter#	implicit def fnToNameFilter(f: String => Boolean): NameFilter =  new NameFilter {#NameFilter.scala
+doBufferableIf#	private def doBufferableIf(condition: => Boolean, appendIfBuffered: => LogEvent, doUnbuffered: AbstractLogger => Unit): Unit = synchronized {#BufferedLogger.scala
+overwriteContaining#	def overwriteContaining(s: String): (String,String) => Boolean = ConsoleOut.overwriteContaining(s)#ConsoleLogger.scala
+systemOutOverwrite#	def systemOutOverwrite(f: (String,String) => Boolean): ConsoleOut = ConsoleOut.systemOutOverwrite(f)#ConsoleLogger.scala
+overwriteContaining#	def overwriteContaining(s: String): (String,String) => Boolean = (cur, prev) =>#ConsoleOut.scala
+systemOutOverwrite#	def systemOutOverwrite(f: (String,String) => Boolean): ConsoleOut = new ConsoleOut {#ConsoleOut.scala
+standard#	def standard(in: OutputStream => Unit, inheritIn: JProcessBuilder => Boolean): ProcessIO = new ProcessIO(in, toStdOut, toStdErr, inheritIn)#ProcessImpl.scala
+#class#private class SequentialProcess(a: ProcessBuilder, b: ProcessBuilder, io: ProcessIO, evaluateSecondProcess: Int => Boolean) extends CompoundProcess#ProcessImpl.scala
+checkBinary#	private def checkBinary(codes: Array[Byte])(reduceProcesses: (ProcessBuilder, ProcessBuilder) => ProcessBuilder)(reduceExit: (Boolean, Boolean) => Boolean) =#ProcessSpecification.scala
+filter#	def filter(f: (A,B) => Boolean): Relation[A,B]#Relation.scala
+filter#	def filter(f: (A,B) => Boolean): Relation[A,B] = Relation.empty[A,B] ++ all.filter(f.tupled)#Relation.scala
+orientations:Map#  def orientations:Map[Int, () => Boolean]#Tetris.scala
+generateOrientations#  protected def generateOrientations(positions_array:List[Vec]*):Map[Int, () => Boolean] = {#Tetris.scala
+addOrientation#    def addOrientation(orientations:Map[Int, () => Boolean], next:Int):Map[Int, () => Boolean] = {#Tetris.scala
+addReadListener#  def addReadListener(f: A => Boolean): Unit =#BlockedQueue.scala
+addListener#  def addListener(f: A => Boolean): Unit = addReadListener(f)#BlockedQueue.scala
+addListener#  def addListener(f: A=> Boolean): Unit#InputChannel.scala
+addListener#   def addListener(f: A=> Boolean): Unit =#JoinInputChannel.scala
+addInputAction#  def  addInputAction[A](channel: InputChannel[A], action: A => Boolean): Unit = #SelectorContext.scala
+eval#  protected def eval(left: Boolean, right: => Boolean): Boolean = {#ConstraintOp.scala
+having#  def having(node: (NodeT) => Boolean = _ => false,#Graph.scala
+nodePredicate#  def nodePredicate [NI, EI[X<:NI] <: EdgeLike[X], NO <: NodeOut[NI], EO[X<:NO] <: EdgeLike[X]] (pred: NI => Boolean) =#GraphPredef.scala
+findCycle#  def findCycle(nodeFilter : (NodeT) => Boolean       = anyNode,#GraphTraversal.scala
+dependentCycles#    def dependentCycles(nodeFilter : (NodeT) => Boolean       = anyNode,#GraphTraversal.scala
+findSuccessor#    def findSuccessor(pred       : (NodeT) => Boolean,#GraphTraversal.scala
+findPredecessor#    def findPredecessor(pred       : (NodeT) => Boolean,#GraphTraversal.scala
+findConnected#    def findConnected(pred       : (NodeT) => Boolean,#GraphTraversal.scala
+pathUntil#    def pathUntil(pred       : (NodeT) => Boolean,#GraphTraversal.scala
+findCycle#    def findCycle(nodeFilter : (NodeT) => Boolean       = anyNode,#GraphTraversal.scala
+findCycle#  override def findCycle(nodeFilter : (NodeT) => Boolean       = anyNode,#GraphTraversalImpl.scala
+findSuccessor#    override def findSuccessor(pred: (NodeT) => Boolean,#GraphTraversalImpl.scala
+findPredecessor#    override def findPredecessor(pred: (NodeT) => Boolean,#GraphTraversalImpl.scala
+findConnected#    override def findConnected(pred: (NodeT) => Boolean,#GraphTraversalImpl.scala
+pathUntil#    override def pathUntil(pred: (NodeT) => Boolean,#GraphTraversalImpl.scala
+findCycle#    override def findCycle(nodeFilter : (NodeT) => Boolean       = anyNode,#GraphTraversalImpl.scala
+search#    def search(elem: A, cond: (A, A) => Boolean): Option[Int] = {#SortedArraySet.scala
+findEntry#  def findEntry[B](toMatch: B, correspond: (A, B) => Boolean): A#ExtSetMethods.scala
+sortWith#  def sortWith(lt: (A, A) => Boolean): SortedSet[A] = sorted(Ordering fromLessThan lt)#ArraySet.scala
+search#    def search(from: Int, incr: Int, hold: Int => Boolean): Option[A] = {#ExtHashSet.scala
+findEntry#  def findEntry[B](other: B, correspond: (A, B) => Boolean): A = {#ExtHashSet.scala
+trueIf#  def trueIf[T](thing: T, test: () => Boolean): Boolean = test()#DSL.scala
+onlyIf#  def onlyIf[T](thing: T, test: () => Boolean): Option[T] = if (test()) Some(thing) else None#DSL.scala
+is#  def is[T](thing: T)(implicit other: T): () => Boolean = () => thing == other#DSL.scala
+statusIs#  def statusIs(other: HttpStatus)(implicit httpResponse: HttpResponse): () => Boolean = {#DSL.scala
+inStatusClass#  def inStatusClass(code: String)(implicit httpResponse: HttpResponse): () => Boolean = {#DSL.scala
+nameMatches#  def nameMatches(name: HttpHeaderName)(implicit httpHeader: HttpHeader): () => Boolean = {#DSL.scala
+typeMatches#  def typeMatches(`type`: String)(implicit mediaType: MediaType): () => Boolean = {#DSL.scala
+warningCodeMatches#  def warningCodeMatches(code: Int)(implicit warningValue: WarningValue): () => Boolean = {#DSL.scala
+primaryLanguageMatches#  def primaryLanguageMatches(primary: String)(implicit lang: Language): () => Boolean = {#DSL.scala
+subLanguagesMatch#  def subLanguagesMatch(sub: String*)(implicit lang: Language): () => Boolean = {#DSL.scala
+await#    def await(cond: => Boolean) = while (!cond) { wait() }#boundedbuffer.scala
+filter#    def filter(p: t => Boolean): m[t] = {#HOSeq.scala
+loopWhile#  def loopWhile(cond: => Boolean)(body: => Unit): Unit =#Combinators.scala
+get#  def get(n: Int)(p: Msg => Boolean): Option[Msg] = {#MQueue.scala
+remove#  def remove(n: Int)(p: (Msg, OutputChannel[Any]) => Boolean): Option[(Msg, OutputChannel[Any])] =#MQueue.scala
+extractFirst#  def extractFirst(p: (Msg, OutputChannel[Any]) => Boolean): MQueueElement[Msg] =#MQueue.scala
+removeInternal#  private def removeInternal(n: Int)(p: (Msg, OutputChannel[Any]) => Boolean): Option[MQueueElement[Msg]] = {#MQueue.scala
+get#  override def get(n: Int)(p: Any => Boolean): Option[Any] = {#MQueue.scala
+remove#  override def remove(n: Int)(p: (Any, OutputChannel[Any]) => Boolean): Option[(Any, OutputChannel[Any])] = {#MQueue.scala
+extractFirst#  override def extractFirst(p: (Any, OutputChannel[Any]) => Boolean): MQueueElement[Any] = {#MQueue.scala
+filterSyms#    def filterSyms(p: Symbol => Boolean): SymbolTable = this -- (syms filterNot p)#SymbolTables.scala
+filterAliases#    def filterAliases(p: (Symbol, TermName) => Boolean): SymbolTable = this -- (aliases filterNot (tuple => p(tuple._1, tuple._2)) map (_._2))#SymbolTables.scala
+createUsageMsg#  def createUsageMsg(cond: Setting => Boolean): String = {#CompilerCommand.scala
+createUsageMsg#  def createUsageMsg(label: String, shouldExplain: Boolean, cond: Setting => Boolean): String = {#CompilerCommand.scala
+resetAllAttrs#  def resetAllAttrs(x: Tree, leaveAlone: Tree => Boolean = null): Tree = new ResetAttrs(false, leaveAlone).transform(x)#Trees.scala
+resetLocalAttrs#  def resetLocalAttrs(x: Tree, leaveAlone: Tree => Boolean = null): Tree = new ResetAttrs(true, leaveAlone).transform(x)#Trees.scala
+resetLocalAttrsKeepLabels#  def resetLocalAttrsKeepLabels(x: Tree, leaveAlone: Tree => Boolean = null): Tree = new ResetAttrs(true, leaveAlone, true).transform(x)#Trees.scala
+#class#  private class ResetAttrs(localOnly: Boolean, leaveAlone: Tree => Boolean = null, keepLabels: Boolean = false) {#Trees.scala
+newLineOptWhenFollowing#    def newLineOptWhenFollowing(p: Int => Boolean) {#Parsers.scala
+ifAthenB#      def ifAthenB[T](f: T => Boolean): PartialFunction[(T, T), T] = {#ICodeCheckers.scala
+retain#    private def retain[A, B](map: mutable.Map[A, B])(p: (A, B) => Boolean) = {#CopyPropagation.scala
+cond#  def cond(p: Any => Boolean): CondPickler[T] = conditionalPickler(this, p)#Pickler.scala
+conditionalPickler#  def conditionalPickler[T](p: Pickler[T], condition: Any => Boolean) = new CondPickler[T](condition) {#Pickler.scala
+logreplay#  def logreplay(event: String, x: => Boolean): Boolean#Replayer.scala
+logreplay#  def logreplay(event: String, x: => Boolean) = {#Replayer.scala
+logreplay#  def logreplay(event: String, x: => Boolean) = x#Replayer.scala
+logreplay#  def logreplay(event: String, x: => Boolean) =#Replayer.scala
+stringToPhaseIdTest#    private def stringToPhaseIdTest(s: String): Int => Boolean = (s indexOf '-') match {#MutableSettings.scala
+subName#    def subName(isDelimiter: Char => Boolean): Name = {#ClassfileParser.scala
+nextEnclosing#    override def nextEnclosing(p: Context => Boolean): Context = this#Contexts.scala
+nextEnclosing#    def nextEnclosing(p: Context => Boolean): Context =#Contexts.scala
+lookupSymbol#    def lookupSymbol(name: Name, qualifies: Symbol => Boolean): NameLookup = {#Contexts.scala
+bestAlternatives#  private def bestAlternatives(alternatives: List[Symbol])(isBetter: (Symbol, Symbol) => Boolean): List[Symbol] = {#Infer.scala
+#class#  private class TypeTreeSubstituter(cond: Name => Boolean) extends Transformer {#Namers.scala
+lsDir#    def lsDir(dir: Directory, filt: String => Boolean = _ => true) =#ClassPath.scala
+findNext#  def findNext(str: String, start: Int)(p: Int => Boolean): Int = {#DocStrings.scala
+findAll#  def findAll(str: String, start: Int)(p: Int => Boolean): List[Int] = {#DocStrings.scala
+tagIndex#  def tagIndex(str: String, p: Int => Boolean = (idx => true)): List[(Int, Int)] = {#DocStrings.scala
+withFilter#    def withFilter(q: A => Boolean): WithFilter = new WithFilter(x => p(x) && q(x))#Option.scala
+runWith#  def runWith[U](action: B => U): A => Boolean = { x =>#PartialFunction.scala
+ensuring#    def ensuring(cond: A => Boolean): A = { assert(cond(__resultOfEnsuring)); __resultOfEnsuring }#Predef.scala
+ensuring#    def ensuring(cond: A => Boolean, msg: => Any): A = { assert(cond(__resultOfEnsuring), msg); __resultOfEnsuring }#Predef.scala
+loopWhile#  def loopWhile[A](cond: => Boolean)(r: Responder[Unit]): Responder[Unit] =#Responder.scala
+filter#  def filter(p: A => Boolean) = new Responder[A] {#Responder.scala
+filterKeys#  def filterKeys(p: A => Boolean): GenMap[A, B]#GenMapLike.scala
+segmentLength#  def segmentLength(p: A => Boolean, from: Int): Int#GenSeqLike.scala
+prefixLength#  def prefixLength(p: A => Boolean): Int = segmentLength(p, 0)#GenSeqLike.scala
+indexWhere#  def indexWhere(p: A => Boolean, from: Int): Int#GenSeqLike.scala
+indexWhere#  def indexWhere(p: A => Boolean): Int = indexWhere(p, 0)#GenSeqLike.scala
+lastIndexWhere#  def lastIndexWhere(p: A => Boolean): Int = lastIndexWhere(p, length - 1)#GenSeqLike.scala
+lastIndexWhere#  def lastIndexWhere(p: A => Boolean, end: Int): Int#GenSeqLike.scala
+corresponds#  def corresponds[B](that: GenSeq[B])(p: (A, B) => Boolean): Boolean#GenSeqLike.scala
+filter#  def filter(pred: A => Boolean): Repr#GenTraversableLike.scala
+filterNot#  def filterNot(pred: A => Boolean): Repr#GenTraversableLike.scala
+partition#  def partition(pred: A => Boolean): (Repr, Repr)#GenTraversableLike.scala
+takeWhile#  def takeWhile(pred: A => Boolean): Repr#GenTraversableLike.scala
+span#  def span(pred: A => Boolean): (Repr, Repr)#GenTraversableLike.scala
+dropWhile#  def dropWhile(pred: A => Boolean): Repr#GenTraversableLike.scala
+count#  def count(p: A => Boolean): Int#GenTraversableOnce.scala
+forall#  def forall(pred: A => Boolean): Boolean#GenTraversableOnce.scala
+exists#  def exists(pred: A => Boolean): Boolean#GenTraversableOnce.scala
+find#  def find(pred: A => Boolean): Option[A]#GenTraversableOnce.scala
+prefixLengthImpl#  private def prefixLengthImpl(p: A => Boolean, expectTrue: Boolean): Int = {#IndexedSeqOptimized.scala
+forall#  def forall(p: A => Boolean): Boolean = prefixLengthImpl(p, expectTrue = true) == length#IndexedSeqOptimized.scala
+exists#  def exists(p: A => Boolean): Boolean = prefixLengthImpl(p, expectTrue = false) != length#IndexedSeqOptimized.scala
+find#  def find(p: A => Boolean): Option[A] = {#IndexedSeqOptimized.scala
+takeWhile#  def takeWhile(p: A => Boolean): Repr = take(prefixLength(p))#IndexedSeqOptimized.scala
+dropWhile#  def dropWhile(p: A => Boolean): Repr = drop(prefixLength(p))#IndexedSeqOptimized.scala
+span#  def span(p: A => Boolean): (Repr, Repr) = splitAt(prefixLength(p))#IndexedSeqOptimized.scala
+segmentLength#  def segmentLength(p: A => Boolean, from: Int): Int = {#IndexedSeqOptimized.scala
+indexWhere#  def indexWhere(p: A => Boolean, from: Int): Int = {#IndexedSeqOptimized.scala
+lastIndexWhere#  def lastIndexWhere(p: A => Boolean, end: Int): Int = {#IndexedSeqOptimized.scala
+newFiltered#  protected override def newFiltered(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with Filtered#IterableViewLike.scala
+newDroppedWhile#  protected override def newDroppedWhile(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with DroppedWhile#IterableViewLike.scala
+newTakenWhile#  protected override def newTakenWhile(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with TakenWhile#IterableViewLike.scala
+filter#  def filter(p: A => Boolean): Iterator[A] = new AbstractIterator[A] {#Iterator.scala
+corresponds#  def corresponds[B](that: GenTraversableOnce[B])(p: (A, B) => Boolean): Boolean = {#Iterator.scala
+withFilter#  def withFilter(p: A => Boolean): Iterator[A] = filter(p)#Iterator.scala
+filterNot#  def filterNot(p: A => Boolean): Iterator[A] = filter(!p(_))#Iterator.scala
+takeWhile#  def takeWhile(p: A => Boolean): Iterator[A] = new AbstractIterator[A] {#Iterator.scala
+partition#  def partition(p: A => Boolean): (Iterator[A], Iterator[A]) = {#Iterator.scala
+span#  def span(p: A => Boolean): (Iterator[A], Iterator[A]) = {#Iterator.scala
+dropWhile#  def dropWhile(p: A => Boolean): Iterator[A] = {#Iterator.scala
+forall#  def forall(p: A => Boolean): Boolean = {#Iterator.scala
+exists#  def exists(p: A => Boolean): Boolean = {#Iterator.scala
+find#  def find(p: A => Boolean): Option[A] = {#Iterator.scala
+indexWhere#  def indexWhere(p: A => Boolean): Int = {#Iterator.scala
+forall#  def forall(p: A => Boolean): Boolean = {#LinearSeqOptimized.scala
+exists#  def exists(p: A => Boolean): Boolean = {#LinearSeqOptimized.scala
+find#  def find(p: A => Boolean): Option[A] = {#LinearSeqOptimized.scala
+takeWhile#  def takeWhile(p: A => Boolean): Repr = {#LinearSeqOptimized.scala
+span#  def span(p: A => Boolean): (Repr, Repr) = {#LinearSeqOptimized.scala
+segmentLength#  def segmentLength(p: A => Boolean, from: Int): Int = {#LinearSeqOptimized.scala
+indexWhere#  def indexWhere(p: A => Boolean, from: Int): Int = {#LinearSeqOptimized.scala
+lastIndexWhere#  def lastIndexWhere(p: A => Boolean, end: Int): Int = {#LinearSeqOptimized.scala
+#class#  protected class FilteredKeys(p: A => Boolean) extends AbstractMap[A, B] with DefaultMap[A, B] {#MapLike.scala
+filterKeys#  def filterKeys(p: A => Boolean): Map[A, B] = new FilteredKeys(p)#MapLike.scala
+filterNot#  override def filterNot(p: ((A, B)) => Boolean): This = {#MapLike.scala
+filterKeys#  override def filterKeys(p: A => Boolean) = self.filterKeys(p)#MapProxyLike.scala
+filterNot#  override def filterNot(p: ((A, B)) => Boolean) = self filterNot p#MapProxyLike.scala
+segmentLength#  def segmentLength(p: A => Boolean, from: Int): Int = {#SeqLike.scala
+indexWhere#  def indexWhere(p: A => Boolean, from: Int): Int = {#SeqLike.scala
+lastIndexWhere#  def lastIndexWhere(p: A => Boolean, end: Int): Int = {#SeqLike.scala
+corresponds#  def corresponds[B](that: GenSeq[B])(p: (A,B) => Boolean): Boolean = {#SeqLike.scala
+sortWith#  def sortWith(lt: (A, A) => Boolean): Repr = sorted(Ordering fromLessThan lt)#SeqLike.scala
+segmentLength#  override def segmentLength(p: A => Boolean, from: Int): Int = self.segmentLength(p, from)#SeqProxyLike.scala
+prefixLength#  override def prefixLength(p: A => Boolean) = self.prefixLength(p)#SeqProxyLike.scala
+indexWhere#  override def indexWhere(p: A => Boolean): Int = self.indexWhere(p)#SeqProxyLike.scala
+indexWhere#  override def indexWhere(p: A => Boolean, from: Int): Int = self.indexWhere(p, from)#SeqProxyLike.scala
+lastIndexWhere#  override def lastIndexWhere(p: A => Boolean): Int = self.lastIndexWhere(p, length - 1)#SeqProxyLike.scala
+lastIndexWhere#  override def lastIndexWhere(p: A => Boolean, end: Int): Int = self.lastIndexWhere(p)#SeqProxyLike.scala
+corresponds#  override def corresponds[B](that: GenSeq[B])(p: (A,B) => Boolean): Boolean = self.corresponds(that)(p)#SeqProxyLike.scala
+sortWith#  override def sortWith(lt: (A, A) => Boolean): Repr = self.sortWith(lt)#SeqProxyLike.scala
+newFiltered#  protected override def newFiltered(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with Filtered#SeqViewLike.scala
+newDroppedWhile#  protected override def newDroppedWhile(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with DroppedWhile#SeqViewLike.scala
+newTakenWhile#  protected override def newTakenWhile(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with TakenWhile#SeqViewLike.scala
+filterKeys#  override def filterKeys(p: A => Boolean): SortedMap[A, B] = new FilteredKeys(p) with SortedMap.Default[A, B] {#SortedMapLike.scala
+filterImpl#  private def filterImpl(p: A => Boolean, isFlipped: Boolean): Repr = {#TraversableLike.scala
+filter#  def filter(p: A => Boolean): Repr = filterImpl(p, isFlipped = false)#TraversableLike.scala
+filterNot#  def filterNot(p: A => Boolean): Repr = filterImpl(p, isFlipped = true)#TraversableLike.scala
+partition#  def partition(p: A => Boolean): (Repr, Repr) = {#TraversableLike.scala
+forall#  def forall(p: A => Boolean): Boolean = {#TraversableLike.scala
+exists#  def exists(p: A => Boolean): Boolean = {#TraversableLike.scala
+find#  def find(p: A => Boolean): Option[A] = {#TraversableLike.scala
+takeWhile#  def takeWhile(p: A => Boolean): Repr = {#TraversableLike.scala
+dropWhile#  def dropWhile(p: A => Boolean): Repr = {#TraversableLike.scala
+span#  def span(p: A => Boolean): (Repr, Repr) = {#TraversableLike.scala
+withFilter#  def withFilter(p: A => Boolean): FilterMonadic[A, Repr] = new WithFilter(p)#TraversableLike.scala
+withFilter#    def withFilter(q: A => Boolean): WithFilter =#TraversableLike.scala
+forall#  def forall(p: A => Boolean): Boolean#TraversableOnce.scala
+exists#  def exists(p: A => Boolean): Boolean#TraversableOnce.scala
+find#  def find(p: A => Boolean): Option[A]#TraversableOnce.scala
+count#  def count(p: A => Boolean): Int = {#TraversableOnce.scala
+withFilter#    def withFilter(p: A => Boolean) = trav.toIterator filter p#TraversableOnce.scala
+filter#    def filter(p: A => Boolean): TraversableOnce[A] = withFilter(p)#TraversableOnce.scala
+filter#  override def filter(p: A => Boolean): Repr = self.filter(p)#TraversableProxyLike.scala
+filterNot#  override def filterNot(p: A => Boolean): Repr = self.filterNot(p)#TraversableProxyLike.scala
+partition#  override def partition(p: A => Boolean): (Repr, Repr) = self.partition(p)#TraversableProxyLike.scala
+forall#  override def forall(p: A => Boolean): Boolean = self.forall(p)#TraversableProxyLike.scala
+exists#  override def exists(p: A => Boolean): Boolean = self.exists(p)#TraversableProxyLike.scala
+count#  override def count(p: A => Boolean): Int = self.count(p)#TraversableProxyLike.scala
+find#  override def find(p: A => Boolean): Option[A] = self.find(p)#TraversableProxyLike.scala
+takeWhile#  override def takeWhile(p: A => Boolean): Repr = self.takeWhile(p)#TraversableProxyLike.scala
+dropWhile#  override def dropWhile(p: A => Boolean): Repr = self.dropWhile(p)#TraversableProxyLike.scala
+span#  override def span(p: A => Boolean): (Repr, Repr) = self.span(p)#TraversableProxyLike.scala
+newFiltered#  protected def newFiltered(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with Filtered#TraversableViewLike.scala
+newDroppedWhile#  protected def newDroppedWhile(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with DroppedWhile#TraversableViewLike.scala
+newTakenWhile#  protected def newTakenWhile(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with TakenWhile#TraversableViewLike.scala
+filter#  override def filter(p: A => Boolean): This = newFiltered(p)#TraversableViewLike.scala
+withFilter#  override def withFilter(p: A => Boolean): This = newFiltered(p)#TraversableViewLike.scala
+partition#  override def partition(p: A => Boolean): (This, This) = (newFiltered(p), newFiltered(!p(_)))#TraversableViewLike.scala
+dropWhile#  override def dropWhile(p: A => Boolean): This = newDroppedWhile(p)#TraversableViewLike.scala
+takeWhile#  override def takeWhile(p: A => Boolean): This = newTakenWhile(p)#TraversableViewLike.scala
+span#  override def span(p: A => Boolean): (This, This) = (newTakenWhile(p), newDroppedWhile(p))#TraversableViewLike.scala
+withFilter#  def withFilter(p: A => Boolean): FilterMonadic[A, Repr]#FilterMonadic.scala
+segmentLength#  override def segmentLength(p: A => Boolean, from: Int): Int = underlying.segmentLength(p, from)#SeqForwarder.scala
+prefixLength#  override def prefixLength(p: A => Boolean) = underlying prefixLength p#SeqForwarder.scala
+indexWhere#  override def indexWhere(p: A => Boolean): Int = underlying indexWhere p#SeqForwarder.scala
+indexWhere#  override def indexWhere(p: A => Boolean, from: Int): Int = underlying.indexWhere(p, from)#SeqForwarder.scala
+lastIndexWhere#  override def lastIndexWhere(p: A => Boolean): Int = underlying lastIndexWhere p#SeqForwarder.scala
+lastIndexWhere#  override def lastIndexWhere(p: A => Boolean, end: Int): Int = underlying.lastIndexWhere(p, end)#SeqForwarder.scala
+corresponds#  override def corresponds[B](that: GenSeq[B])(p: (A,B) => Boolean): Boolean = underlying.corresponds(that)(p)#SeqForwarder.scala
+forall#  override def forall(p: A => Boolean): Boolean = underlying forall p#TraversableForwarder.scala
+exists#  override def exists(p: A => Boolean): Boolean = underlying exists p#TraversableForwarder.scala
+count#  override def count(p: A => Boolean): Int = underlying count p#TraversableForwarder.scala
+find#  override def find(p: A => Boolean): Option[A] = underlying find p#TraversableForwarder.scala
+filter#  override def filter(f: ((Int, T)) => Boolean): IntMap[T] = this match {#IntMap.scala
+filter#  override def filter(f: ((Long, T)) => Boolean): LongMap[T] = this match {#LongMap.scala
+filterKeys#  override def filterKeys(p: A => Boolean): Map[A, B] = new FilteredKeys(p) with DefaultMap[A, B]#MapLike.scala
+filterKeys#  override def filterKeys(p: A => Boolean) = self.filterKeys(p)#MapProxy.scala
+skipCount#  private def skipCount(p: Int => Boolean): Int = {#Range.scala
+filterKeys#  override def filterKeys(p: A => Boolean): SortedMap[A, B] = new FilteredKeys(p) with SortedMap.Default[A, B] {#SortedMap.scala
+filter#  override def filter(p: A => Boolean): Stream[A] = {#Stream.scala
+withFilter#  override final def withFilter(p: A => Boolean): StreamWithFilter = new StreamWithFilter(p)#Stream.scala
+withFilter#    override def withFilter(q: A => Boolean): StreamWithFilter =#Stream.scala
+partition#  override def partition(p: A => Boolean): (Stream[A], Stream[A]) = (filter(p(_)), filterNot(p(_)))#Stream.scala
+takeWhile#  override def takeWhile(p: A => Boolean): Stream[A] =#Stream.scala
+dropWhile#  override def dropWhile(p: A => Boolean): Stream[A] = {#Stream.scala
+newFiltered#  protected override def newFiltered(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with Filtered#StreamViewLike.scala
+newDroppedWhile#  protected override def newDroppedWhile(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with DroppedWhile#StreamViewLike.scala
+newTakenWhile#  protected override def newTakenWhile(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with TakenWhile#StreamViewLike.scala
+countWhile#  private[this] def countWhile(p: ((A, B)) => Boolean): Int = {#TreeMap.scala
+dropWhile#  override def dropWhile(p: ((A, B)) => Boolean) = drop(countWhile(p))#TreeMap.scala
+takeWhile#  override def takeWhile(p: ((A, B)) => Boolean) = take(countWhile(p))#TreeMap.scala
+span#  override def span(p: ((A, B)) => Boolean) = splitAt(countWhile(p))#TreeMap.scala
+countWhile#  private[this] def countWhile(p: A => Boolean): Int = {#TreeSet.scala
+dropWhile#  override def dropWhile(p: A => Boolean) = drop(countWhile(p))#TreeSet.scala
+takeWhile#  override def takeWhile(p: A => Boolean) = take(countWhile(p))#TreeSet.scala
+span#  override def span(p: A => Boolean) = splitAt(countWhile(p))#TreeSet.scala
+retain#  override def retain(p: (A, B) => Boolean): this.type = {#ImmutableMapAdaptor.scala
+exists#  override def exists(p: A => Boolean): Boolean = set.exists(p)#ImmutableSetAdaptor.scala
+newFiltered#  protected override def newFiltered(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with Filtered#IndexedSeqView.scala
+newDroppedWhile#  protected override def newDroppedWhile(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with DroppedWhile#IndexedSeqView.scala
+newTakenWhile#  protected override def newTakenWhile(p: A => Boolean): Transformed[A] = new { val pred = p } with AbstractTransformed[A] with TakenWhile#IndexedSeqView.scala
+filter#  override def filter(p: A => Boolean): This = newFiltered(p)#IndexedSeqView.scala
+dropWhile#  override def dropWhile(p: A => Boolean): This = newDroppedWhile(p)#IndexedSeqView.scala
+takeWhile#  override def takeWhile(p: A => Boolean): This = newTakenWhile(p)#IndexedSeqView.scala
+span#  override def span(p: A => Boolean): (This, This) = (newTakenWhile(p), newDroppedWhile(p))#IndexedSeqView.scala
+#class#  protected class FilteredKeys(p: A => Boolean) extends super.FilteredKeys(p) {#LinkedHashMap.scala
+filterKeys#  override def filterKeys(p: A => Boolean): scala.collection.Map[A, B] = new FilteredKeys(p)#LinkedHashMap.scala
+retain#  def retain(p: (A, B) => Boolean): this.type = {#MapLike.scala
+entryExists#  def entryExists(key: A, p: B => Boolean): Boolean = get(key) match {#MultiMap.scala
+retain#  override def retain(f : (Key, Value) => Boolean) = {#OpenHashMap.scala
+dequeueFirst#  def dequeueFirst(p: A => Boolean): Option[A] =#Queue.scala
+removeFromList#  private def removeFromList(p: A => Boolean): Option[A] = {#Queue.scala
+dequeueAll#  def dequeueAll(p: A => Boolean): Seq[A] = {#Queue.scala
+removeAllFromList#  private def removeAllFromList(p: A => Boolean, res: ArrayBuffer[A]): ArrayBuffer[A] = {#Queue.scala
+extractFirst#  def extractFirst(start: LinkedList[A], p: A => Boolean): Option[LinkedList[A]] = {#Queue.scala
+retain#  def retain(p: A => Boolean): Unit = for (elem <- this.toList) if (!p(elem)) this -= elem#SetLike.scala
+retain#  override def retain(p: (A, B) => Boolean): this.type = synchronized[this.type] { super.retain(p) }#SynchronizedMap.scala
+dequeueFirst#  override def dequeueFirst(p: A => Boolean): Option[A] = synchronized { super.dequeueFirst(p) }#SynchronizedQueue.scala
+dequeueAll#  override def dequeueAll(p: A => Boolean): Seq[A] = synchronized { super.dequeueAll(p) }#SynchronizedQueue.scala
+retain#  override def retain(p: A => Boolean) = synchronized {#SynchronizedSet.scala
+count#  def count(p: T => Boolean): Int = {#ParIterableLike.scala
+forall#  def forall(pred: T => Boolean): Boolean = {#ParIterableLike.scala
+exists#  def exists(pred: T => Boolean): Boolean = {#ParIterableLike.scala
+find#  def find(pred: T => Boolean): Option[T] = {#ParIterableLike.scala
+filter#  def filter(pred: T => Boolean): Repr = {#ParIterableLike.scala
+filterNot#  def filterNot(pred: T => Boolean): Repr = {#ParIterableLike.scala
+partition#  def partition(pred: T => Boolean): (Repr, Repr) = {#ParIterableLike.scala
+takeWhile#  def takeWhile(pred: T => Boolean): Repr = {#ParIterableLike.scala
+span#  def span(pred: T => Boolean): (Repr, Repr) = {#ParIterableLike.scala
+dropWhile#  def dropWhile(pred: T => Boolean): Repr = {#ParIterableLike.scala
+#class#  protected[this] class Count(pred: T => Boolean, protected[this] val pit: IterableSplitter[T])#ParIterableLike.scala
+#class#  protected[this] class Forall(pred: T => Boolean, protected[this] val pit: IterableSplitter[T])#ParIterableLike.scala
+#class#  protected[this] class Exists(pred: T => Boolean, protected[this] val pit: IterableSplitter[T])#ParIterableLike.scala
+#class#  protected[this] class Find[U >: T](pred: T => Boolean, protected[this] val pit: IterableSplitter[T])#ParIterableLike.scala
+#class#  protected[this] class Filter[U >: T, This >: Repr](pred: T => Boolean, cbf: CombinerFactory[U, This], protected[this] val pit: IterableSplitter[T])#ParIterableLike.scala
+#class#  protected[this] class FilterNot[U >: T, This >: Repr](pred: T => Boolean, cbf: CombinerFactory[U, This], protected[this] val pit: IterableSplitter[T])#ParIterableLike.scala
+filter#  override def filter(p: T => Boolean): This = newForced(thisParSeq.filter(p)).asInstanceOf[This]#ParIterableViewLike.scala
+filterNot#  override def filterNot(p: T => Boolean): This = newForced(thisParSeq.filterNot(p)).asInstanceOf[This]#ParIterableViewLike.scala
+partition#  override def partition(p: T => Boolean): (This, This) = {#ParIterableViewLike.scala
+takeWhile#  override def takeWhile(p: T => Boolean): This = newForced(thisParSeq.takeWhile(p)).asInstanceOf[This]#ParIterableViewLike.scala
+dropWhile#  override def dropWhile(p: T => Boolean): This = newForced(thisParSeq.dropWhile(p)).asInstanceOf[This]#ParIterableViewLike.scala
+span#  override def span(p: T => Boolean): (This, This) = {#ParIterableViewLike.scala
+newDroppedWhile#  protected def newDroppedWhile(p: T => Boolean) = unsupported#ParIterableViewLike.scala
+newTakenWhile#  protected def newTakenWhile(p: T => Boolean) = unsupported#ParIterableViewLike.scala
+newFiltered#  protected def newFiltered(p: T => Boolean) = unsupported#ParIterableViewLike.scala
+filterKeys#  def filterKeys(p: K => Boolean): ParMap[K, V] = new ParMap[K, V] {#ParMapLike.scala
+segmentLength#  def segmentLength(p: T => Boolean, from: Int): Int = if (from >= length) 0 else {#ParSeqLike.scala
+indexWhere#  def indexWhere(p: T => Boolean, from: Int): Int = if (from >= length) -1 else {#ParSeqLike.scala
+lastIndexWhere#  def lastIndexWhere(p: T => Boolean, end: Int): Int = if (end < 0) -1 else {#ParSeqLike.scala
+corresponds#  def corresponds[S](that: GenSeq[S])(p: (T, S) => Boolean): Boolean = that ifParSeq { pthat =>#ParSeqLike.scala
+#class#  protected[this] class SegmentLength(pred: T => Boolean, from: Int, protected[this] val pit: SeqSplitter[T])#ParSeqLike.scala
+#class#  protected[this] class IndexWhere(pred: T => Boolean, from: Int, protected[this] val pit: SeqSplitter[T])#ParSeqLike.scala
+#class#  protected[this] class LastIndexWhere(pred: T => Boolean, pos: Int, protected[this] val pit: SeqSplitter[T])#ParSeqLike.scala
+#class#  protected[this] class Corresponds[S](corr: (T, S) => Boolean, protected[this] val pit: SeqSplitter[T], val otherpit: SeqSplitter[S])#ParSeqLike.scala
+count#  override def count(p: T => Boolean): Int = {#RemainsIterator.scala
+filter2combiner#  def filter2combiner[U >: T, This](pred: T => Boolean, cb: Combiner[U, This]): Combiner[U, This] = {#RemainsIterator.scala
+filterNot2combiner#  def filterNot2combiner[U >: T, This](pred: T => Boolean, cb: Combiner[U, This]): Combiner[U, This] = {#RemainsIterator.scala
+partition2combiners#  def partition2combiners[U >: T, This](pred: T => Boolean, btrue: Combiner[U, This], bfalse: Combiner[U, This]) = {#RemainsIterator.scala
+takeWhile2combiner#  def takeWhile2combiner[U >: T, This](p: T => Boolean, cb: Combiner[U, This]) = {#RemainsIterator.scala
+span2combiners#  def span2combiners[U >: T, This](p: T => Boolean, before: Combiner[U, This], after: Combiner[U, This]) = {#RemainsIterator.scala
+prefixLength#  def prefixLength(pred: T => Boolean): Int = {#RemainsIterator.scala
+indexWhere#  override def indexWhere(pred: T => Boolean): Int = {#RemainsIterator.scala
+lastIndexWhere#  def lastIndexWhere(pred: T => Boolean): Int = {#RemainsIterator.scala
+corresponds#  def corresponds[S](corr: (T, S) => Boolean)(that: Iterator[S]): Boolean = {#RemainsIterator.scala
+count#    override def count(p: T => Boolean) = {#ParArray.scala
+count_quick#    private def count_quick(p: T => Boolean, a: Array[Any], ntil: Int, from: Int) = {#ParArray.scala
+forall#    override def forall(p: T => Boolean): Boolean = {#ParArray.scala
+forall_quick#    private def forall_quick(p: T => Boolean, a: Array[Any], nextuntil: Int, start: Int): Boolean = {#ParArray.scala
+exists#    override def exists(p: T => Boolean): Boolean = {#ParArray.scala
+exists_quick#    private def exists_quick(p: T => Boolean, a: Array[Any], nextuntil: Int, start: Int): Boolean = {#ParArray.scala
+find#    override def find(p: T => Boolean): Option[T] = {#ParArray.scala
+find_quick#    private def find_quick(p: T => Boolean, a: Array[Any], nextuntil: Int, start: Int): Option[T] = {#ParArray.scala
+prefixLength#    override def prefixLength(pred: T => Boolean): Int = {#ParArray.scala
+prefixLength_quick#    private def prefixLength_quick(pred: T => Boolean, a: Array[Any], ntil: Int, startpos: Int): Int = {#ParArray.scala
+indexWhere#    override def indexWhere(pred: T => Boolean): Int = {#ParArray.scala
+indexWhere_quick#    private def indexWhere_quick(pred: T => Boolean, a: Array[Any], ntil: Int, from: Int): Int = {#ParArray.scala
+lastIndexWhere#    override def lastIndexWhere(pred: T => Boolean): Int = {#ParArray.scala
+lastIndexWhere_quick#    private def lastIndexWhere_quick(pred: T => Boolean, a: Array[Any], from: Int, ntil: Int): Int = {#ParArray.scala
+filter2combiner#    override def filter2combiner[U >: T, This](pred: T => Boolean, cb: Combiner[U, This]) = {#ParArray.scala
+filter2combiner_quick#    private def filter2combiner_quick[U >: T, This](pred: T => Boolean, cb: Builder[U, This], a: Array[Any], ntil: Int, from: Int) {#ParArray.scala
+filterNot2combiner#    override def filterNot2combiner[U >: T, This](pred: T => Boolean, cb: Combiner[U, This]) = {#ParArray.scala
+filterNot2combiner_quick#    private def filterNot2combiner_quick[U >: T, This](pred: T => Boolean, cb: Builder[U, This], a: Array[Any], ntil: Int, from: Int) {#ParArray.scala
+partition2combiners#    override def partition2combiners[U >: T, This](pred: T => Boolean, btrue: Combiner[U, This], bfalse: Combiner[U, This]) = {#ParArray.scala
+partition2combiners_quick#    private def partition2combiners_quick[U >: T, This](p: T => Boolean, btrue: Builder[U, This], bfalse: Builder[U, This], a: Array[Any], ntil: Int, from: Int) {#ParArray.scala
+filter#  def filter(@deprecatedName('pred) p: T => Boolean)(implicit executor: ExecutionContext): Future[T] = {#Future.scala
+find#  def find[T](@deprecatedName('futurestravonce) futures: TraversableOnce[Future[T]])(@deprecatedName('predicate) p: T => Boolean)(implicit executor: ExecutionContext): Future[Option[T]] = {#Future.scala
+fromFunction#  def fromFunction[T](cmp: (T, T) => Boolean): Equiv[T] = new Equiv[T] {#Equiv.scala
+fromLessThan#  def fromLessThan[T](cmp: (T, T) => Boolean): Ordering[T] = new Ordering[T] {#Ordering.scala
+filter#  def filter[To1, To2](f: (El1, El2) => Boolean)(implicit cbf1: CBF[Repr1, El1, To1], cbf2: CBF[Repr2, El2, To2]): (To1, To2) = {#Tuple2Zipped.scala
+exists#  def exists(f: (El1, El2) => Boolean): Boolean = {#Tuple2Zipped.scala
+forall#  def forall(f: (El1, El2) => Boolean): Boolean =#Tuple2Zipped.scala
+filter#  def filter[To1, To2, To3](f: (El1, El2, El3) => Boolean)(#Tuple3Zipped.scala
+exists#  def exists(f: (El1, El2, El3) => Boolean): Boolean = {#Tuple3Zipped.scala
+forall#  def forall(f: (El1, El2, El3) => Boolean): Boolean =#Tuple3Zipped.scala
+forall#    def forall(f: A => Boolean) = e match {#Either.scala
+exists#    def exists(f: A => Boolean) = e match {#Either.scala
+filter#    def filter[Y](p: A => Boolean): Option[Either[A, Y]] = e match {#Either.scala
+forall#    def forall(f: B => Boolean) = e match {#Either.scala
+exists#    def exists(f: B => Boolean) = e match {#Either.scala
+filter#    def filter[X](p: B => Boolean): Option[Either[X, B]] = e match {#Either.scala
+stableSort#  def stableSort[K: ClassTag](a: Array[K], f: (K, K) => Boolean) {#Sorting.scala
+stableSort#  def stableSort[K: ClassTag](a: Seq[K], f: (K, K) => Boolean): Array[K] = {#Sorting.scala
+stableSort#  private def stableSort[K : ClassTag](a: Array[K], lo: Int, hi: Int, scratch: Array[K], f: (K,K) => Boolean) {#Sorting.scala
+filter#  def filter(p: T => Boolean): Try[T]#Try.scala
+filter#  def filter(p: T => Boolean): Try[T] = this#Try.scala
+filter#  def filter(p: T => Boolean): Try[T] = {#Try.scala
+mkCatcher#  def mkCatcher[Ex <: Throwable: ClassTag, T](isDef: Ex => Boolean, f: Ex => T) = new Catcher[T] {#Exception.scala
+mkThrowableCatcher#  def mkThrowableCatcher[T](isDef: Throwable => Boolean, f: Throwable => T) = mkCatcher(isDef, f)#Exception.scala
+filterWithError#    def filterWithError(p: T => Boolean, error: T => String, position: Input): ParseResult[T]#Parsers.scala
+filterWithError#    def filterWithError(p: T => Boolean, error: T => String, position: Input): ParseResult[T] =#Parsers.scala
+filterWithError#    def filterWithError(p: Nothing => Boolean, error: Nothing => String, position: Input): ParseResult[Nothing] = this#Parsers.scala
+filter#    def filter(p: T => Boolean): Parser[T]#Parsers.scala
+withFilter#    def withFilter(p: T => Boolean): Parser[T]#Parsers.scala
+elem#  def elem(kind: String, p: Elem => Boolean) = acceptIf(p)(inEl => kind+##)#Parsers.scala
+acceptIf#  def acceptIf(p: Elem => Boolean)(err: Elem => String): Parser[Elem] = Parser { in =>#Parsers.scala
+filter#  override def filter(f: MetaData => Boolean): MetaData =#MetaData.scala
+apply#  def apply(f: Node => Boolean): NodeSeq = filter(f)#NodeSeq.scala
+makeSeq#    def makeSeq(cond: (Node) => Boolean) =#NodeSeq.scala
+filt#    def filt(cond: (Node) => Boolean) = this flatMap (_.descendant_or_self) filter cond#NodeSeq.scala
+filter#  override def filter(f: MetaData => Boolean): MetaData = this#Null.scala
+similarBytecode#  def similarBytecode(methA: MethodNode, methB: MethodNode, similar: (Instruction, Instruction) => Boolean) = {#BytecodeTest.scala
+fields#  def fields[T: ClassTag](p: JField => Boolean) = {#SigTest.scala
+methods#  def methods[T: ClassTag](p: JMethod => Boolean) = {#SigTest.scala
+printStatistics#  def printStatistics(stats: Statistics = getStatistics, filter: MethodCallTrace => Boolean = standardFilter): Unit = {#Instrumentation.scala
+nextTestActionExpectTrue#  def nextTestActionExpectTrue(reason: String, body: => Boolean): Boolean = (#Runner.scala
+runInContext#  def runInContext(body: => Boolean): (Boolean, LogContext) = {#Runner.scala
+runTestCommon#  def runTestCommon(andAlso: => Boolean): (Boolean, LogContext) = runInContext {#Runner.scala
+mapInPlace#    def mapInPlace(mapFn: String => String)(filterFn: String => Boolean = _ => true): Unit =#package.scala
+filter#    def filter(cond: Symbol => Boolean): Symbol#Symbols.scala
+suchThat#    def suchThat(cond: Symbol => Boolean): Symbol#Symbols.scala
+withFilter#    def withFilter(f: Tree => Boolean): List[Tree]#Trees.scala
+filter#    def filter(f: Tree => Boolean): List[Tree]#Trees.scala
+find#    def find(p: Tree => Boolean): Option[Tree]#Trees.scala
+exists#    def exists(p: Tree => Boolean): Boolean#Trees.scala
+forAll#    def forAll(p: Tree => Boolean): Boolean#Trees.scala
+find#    def find(p: Type => Boolean): Option[Type]#Types.scala
+exists#    def exists(p: Type => Boolean): Boolean#Types.scala
+filterAnnotations#    def filterAnnotations(p: AnnotationInfo => Boolean): Self #AnnotationInfos.scala
+hasArgWhich#    def hasArgWhich(p: Tree => Boolean) = args exists (_ exists p)#AnnotationInfos.scala
+exists#    def exists(p: Type => Boolean): Boolean = elems exists p#BaseTypeSeqs.scala
+exists#    override def exists(p: Type => Boolean) = elems exists (x => p(f(x)))#BaseTypeSeqs.scala
+symbolsMapFilt#    private def symbolsMapFilt[T](syms: List[Symbol], p: Name => Boolean, f: Name => T) = symbolsMap(syms filter (x => p(x.name)), f)#Definitions.scala
+isPossiblySpecializedType#    def isPossiblySpecializedType(tp: Type)(cond: Type => Boolean) = {#Definitions.scala
+ifSym#    private def ifSym(tree: Tree, p: Symbol => Boolean) = symFn(tree, p, false)#Printers.scala
+filterNot#    override def filterNot(p: Symbol => Boolean): Scope = (#Scopes.scala
+filter#    override def filter(p: Symbol => Boolean): Scope = (#Scopes.scala
+filterAnnotations#    def filterAnnotations(p: AnnotationInfo => Boolean): this.type =#Symbols.scala
+filter#    def filter(cond: Symbol => Boolean): Symbol =#Symbols.scala
+suchThat#    def suchThat(cond: Symbol => Boolean): Symbol = {#Symbols.scala
+filter#    override def filter(cond: Symbol => Boolean) = this#Symbols.scala
+withFilter#    override def withFilter(f: Tree => Boolean): List[Tree] = {#Trees.scala
+filter#    override def filter(f: Tree => Boolean): List[Tree] = withFilter(f)#Trees.scala
+find#    override def find(p: Tree => Boolean): Option[Tree] = {#Trees.scala
+exists#    override def exists(p: Tree => Boolean): Boolean = !find(p).isEmpty#Trees.scala
+forAll#    override def forAll(p: Tree => Boolean): Boolean = find(!p(_)).isEmpty#Trees.scala
+correspondsStructure#    def correspondsStructure(that: Tree)(f: (Tree,Tree) => Boolean): Boolean =#Trees.scala
+freeSyms#    private def freeSyms[S <: Symbol](isFree: Symbol => Boolean, symOfType: Type => Symbol): List[S] = {#Trees.scala
+hasSymbolWhich#    def hasSymbolWhich(f: Symbol => Boolean) =#Trees.scala
+withFilter#    def withFilter(p: Type => Boolean) = new FilterMapForeach(p)#Types.scala
+find#    def find(p: Type => Boolean): Option[Type] = new FindTypeCollector(p).collect(this)#Types.scala
+exists#    def exists(p: Type => Boolean): Boolean = !find(p).isEmpty#Types.scala
+filterAnnotations#    def filterAnnotations(p: AnnotationInfo => Boolean): Type = this#Types.scala
+withTypeVars#    def withTypeVars(op: Type => Boolean): Boolean = withTypeVars(op, AnyDepth)#Types.scala
+withTypeVars#    def withTypeVars(op: Type => Boolean, depth: Int): Boolean = {#Types.scala
+filterAnnotations#    override def filterAnnotations(p: AnnotationInfo => Boolean): Type = {#Types.scala
+elementTest#  def elementTest(container: Symbol, tp: Type)(f: Type => Boolean): Boolean = {#Types.scala
+explain#  protected def explain[T](op: String, p: (Type, T) => Boolean, tp1: Type, arg2: T): Boolean = {#Types.scala
+splitWhere#  def splitWhere(str: String, f: Char => Boolean, doDropIndex: Boolean = false): Option[(String, String)] =#StringOps.scala
+walkFilter#  override def walkFilter(cond: Path => Boolean): Iterator[Path] =#Directory.scala
+walkFilter#  override def walkFilter(cond: Path => Boolean): Iterator[Path] =#File.scala
+walkFilter#  def walkFilter(cond: Path => Boolean): Iterator[Path] =#Path.scala
+exists#    override def exists(p: Type => Boolean): Boolean = synchronized { super.exists(p) }#SynchronizedOps.scala
+explain#  override protected def explain[T](op: String, p: (Type, T) => Boolean, tp1: Type, arg2: T): Boolean = {#SynchronizedTypes.scala
+delimited:#  def delimited: Char => Boolean#Delimited.scala
+readWhile#  private def readWhile(cond: String => Boolean) = {#ILoop.scala
+readYesOrNo#  def readYesOrNo(prompt: String, alt: => Boolean): Boolean = readOneKey(prompt) match {#InteractiveReader.scala
+apply#  def apply(s: String, cursor: Int, delimited: Char => Boolean): Parsed =#Parsed.scala
+hasAncestorName#  def hasAncestorName(f: String => Boolean) = superNames exists f#RichClass.scala
+hasAncestor#  def hasAncestor(f: JClass => Boolean) = supers exists f#RichClass.scala
+preCondition:#    def preCondition: (State => Boolean) = s => preConditions.toList.forall(_.apply(s))#Commands.scala
+filter#  def filter(p: T => Boolean): Gen[T] = Gen(prms => for {#Gen.scala
+withFilter#  def withFilter(p: T => Boolean) = new GenWithFilter[T](this, p)#Gen.scala
+withFilter#    def withFilter(q: A => Boolean): GenWithFilter[A] = new GenWithFilter[A](self, x => p(x) && q(x))#Gen.scala
+suchThat#  def suchThat(p: T => Boolean): Gen[T] = filter(p)#Gen.scala
+inline#    def inline(isInlineEnd: => Boolean): Inline = {#CommentFactoryBase.scala
+countLinks#    def countLinks(c: Comment, p: EntityLink => Boolean) = {#ScaladocModelTest.scala
+filter#  def filter(f : A => Boolean) : M[A]#Functors.scala
+filter#    def filter(f : Nothing => Boolean) : M[Nothing] = this#Functors.scala
+filter#  def filter(f : A => Boolean) = flatMap { a => out => if(f(a)) Success(out, a) else Failure }#Rule.scala
+cond#  def cond(f : S => Boolean) = get filter f#Rules.scala
+repeatUntil#  def repeatUntil[T, X](rule : Rule[T => T, X])(finished : T => Boolean)(initial : T) = apply {#Rules.scala
+inputVerifier:#  def inputVerifier: Component => Boolean = { a =>#Component.scala
+inputVerifier_=#  def inputVerifier_=(v: Component => Boolean) {#Component.scala
+verifier:#  def verifier: String => Boolean = s => Option(peer.getInputVerifier) forall (_ verify peer)#TextField.scala
+verifier_=#  def verifier_=(v: String => Boolean) {#TextField.scala
+shouldYieldFocus:#  def shouldYieldFocus: String => Boolean = s => Option(peer.getInputVerifier) forall (_ shouldYieldFocus peer)#TextField.scala
+shouldYieldFocus_=#  def shouldYieldFocus_=(y: String=>Boolean) {#TextField.scala
+filterer:#  def filterer: T => Boolean#Operators.scala
+taker:#  def taker: T => Boolean#Operators.scala
+sequentialCount#  def sequentialCount(pred: T => Boolean, sz: Int) = {#SequentialOps.scala
+sequentialForall#  def sequentialForall(pred: T => Boolean, sz: Int) = {#SequentialOps.scala
+sequentialExists#  def sequentialExists(pred: T => Boolean, sz: Int) = {#SequentialOps.scala
+sequentialFind#  def sequentialFind(pred: T => Boolean, sz: Int) = {#SequentialOps.scala
+sequentialFilter#  def sequentialFilter(pred: T => Boolean, sz: Int) = {#SequentialOps.scala
+sequentialPartition#  def sequentialPartition(pred: T => Boolean, sz: Int) = {#SequentialOps.scala
+sequentialTakeWhile#  def sequentialTakeWhile(p: T => Boolean, sz: Int) = {#SequentialOps.scala
+sequentialSpan#  def sequentialSpan(p: T => Boolean, sz: Int) = {#SequentialOps.scala
+sequentialSegmentLength#  def sequentialSegmentLength(pred: T => Boolean, from: Int, sz: Int) = {#SequentialOps.scala
+sequentialIndexWhere#  def sequentialIndexWhere(pred: T => Boolean, from: Int, sz: Int) = {#SequentialOps.scala
+sequentialLastIndexWhere#  def sequentialLastIndexWhere(pred: T => Boolean, end: Int, sz: Int) = {#SequentialOps.scala
+sequentialCorresponds#  def sequentialCorresponds(sq: Seq[T], f: (T, T) => Boolean, sz: Int): Boolean = {#SequentialOps.scala
+takeWhile#  override def takeWhile(p: A => Boolean): List[A] = {#spec-List.scala
+dropWhile#  override def dropWhile(p: A => Boolean): List[A] = {#spec-List.scala
+span#  override def span(p: A => Boolean): (List[A], List[A]) = {#spec-List.scala
+sort#  def sort(lt : (A,A) => Boolean): List[A] = {#spec-List.scala
+forall2#  def forall2[A,B](xs: List[A], ys: List[B])(f: (A, B) => Boolean): Boolean = {#spec-List.scala
+exists2#  def exists2[A,B](xs: List[A], ys: List[B])(f: (A, B) => Boolean): Boolean = {#spec-List.scala
+filter#  def filter(p: ActorRef => Boolean): Array[ActorRef] = {#ActorRegistry.scala
+filterTypedActors#  def filterTypedActors(p: AnyRef => Boolean): Array[AnyRef] = {#ActorRegistry.scala
+findValue#  def findValue(key: K)(f: (V) => Boolean): Option[V] = {#ActorRegistry.scala
+exists#  override def exists(f: T => Boolean): Boolean = items.exists(f)#Iterators.scala
+exists#  override def exists(f: ActorRef => Boolean): Boolean = items.exists(f)#Iterators.scala
+test1#  def test1(b: => Boolean) = {#t1820.scala
+assert#  def assert(cond: => Boolean, hint: String) {#actor-getstate.scala
+withFilter#  def withFilter(p: A => Boolean): WithFilter = new WithFilter(p)#genericouter.scala
+apply#   def apply(f : (A => Boolean)) : Iterator[B] =#spec-partialmap.scala
+ensure#        def ensure(postcondition: a => Boolean): a#t0031.scala
+require#    def require[a](precondition: => Boolean)(command: => a): Ensure[a] =#t0031.scala
+ensure#	        def ensure(postcondition: a => Boolean): a = {#t0031.scala
+min0#    def min0[A](less: (A, A) => Boolean, xs: List[A]): Option[A] = xs match {#t0082.scala
+f#  def f(cond: => Boolean) = while (cond == false) {};#t0093.scala
+filteringFunction#  def filteringFunction[V](filter: V => Boolean): List[V] => List[V] = {#Seq.scala
+f1#  def f1(f: String => Boolean) = f(##)#t3430.scala
+lazyFilter#  def lazyFilter[E](s: Stream[E], p: E => Boolean): Stream[E] = s match {#t4649.scala
+filter#    def filter(p: B => Boolean) = ???#t7239.scala
+filter#  def filter(p: T => Boolean): MyType[T]#tcpoly_boundedmonad.scala
+filter#  def filter(p: T => Boolean): Set[T] = sys.error(##)#tcpoly_boundedmonad.scala
+filter#  def filter(p: A => Boolean): MyType[A] #tcpoly_checkkinds_mix.scala
+filter#    def filter(p: t => Boolean): m[t] = {#tcpoly_seq.scala
+filter#    def filter(p: t => Boolean): m[t] = {#tcpoly_seq_typealias.scala
+#&&#    def && (x: => Boolean): Boolean = ifThenElse[Boolean](x)(new False());#Course-2002-03.scala
+#||#    def || (x: => Boolean): Boolean = ifThenElse[Boolean](new True())(x);#Course-2002-03.scala
+filter0#    def filter0(f: Int => Boolean, accu: IntSet): IntSet;#Course-2002-03.scala
+filter#    def filter(f: Int => Boolean): IntSet = filter0(f, new Empty);#Course-2002-03.scala
+filter0#    def filter0(f: Int => Boolean, accu: IntSet): IntSet = accu;#Course-2002-03.scala
+filter0#    def filter0(f: Int => Boolean, accu: IntSet): IntSet =#Course-2002-03.scala
+quicksort#  def quicksort[a] (less : (a,a) => Boolean) (xs : List[a]) : List[a] = {#Course-2002-04.scala
+mergesort#  def mergesort[a] (less : (a,a) => Boolean) (xs: Array[a]): Unit = {#Course-2002-04.scala
+While#    def While(c: => Boolean)(b: => Unit): Unit =#Course-2002-04.scala
+partition#  def partition[a](xs: List[a], pred: a => Boolean): Pair[List[a], List[a]] = {#Course-2002-05.scala
+quicksort#  def quicksort[a] (less : (a,a) => Boolean) (xs : List[a]) : List[a] = {#Course-2002-05.scala
+partition#  def partition[a](xs: List[a], pred: a => Boolean): Pair[List[a], List[a]] = {#Course-2002-05.scala
+quicksort#  def quicksort[a] (less : (a,a) => Boolean) (xs : List[a]) : List[a] = {#Course-2002-05.scala
+While#  def While(condition: => Boolean)(command: => Unit): Unit =#Course-2002-08.scala
+filter#  def filter(p: Int => Boolean) =#missingparams.scala
+count#    def count(condition: Expr[_] => Boolean): Int =#patmat-exprs.scala
+sort#        def sort(p: (A, A) => Boolean) = {#reify_implicits-new.scala
+sort#        def sort(p: (A, A) => Boolean) = {#reify_implicits-old.scala
+testStreamPred#  def testStreamPred(s: Stream[Int])(p: Int => Boolean) {#stream-stack-overflow-filter-map.scala
+loopWhile#    def loopWhile[T](cond: =>Boolean)(body: =>(Unit @xyz[T])): Unit @ xyz[T] = {{#t1501.scala
+check_success_b#  def check_success_b(name: String, closure: => Boolean, expected: Boolean) {#tailcalls.scala
+setup#    def setup(invariant: AVLTree[Int] => Boolean) = forAll(genInput) {#avl.scala
+countPredicates:#  def countPredicates: List[T => Boolean]#Operators.scala
+forallPredicates:#  def forallPredicates: List[T => Boolean]#Operators.scala
+existsPredicates:#  def existsPredicates: List[T => Boolean]#Operators.scala
+findPredicates:#  def findPredicates: List[T => Boolean]#Operators.scala
+filterPredicates:#  def filterPredicates: List[T => Boolean]#Operators.scala
+filterNotPredicates:#  def filterNotPredicates: List[T => Boolean]#Operators.scala
+partitionPredicates:#  def partitionPredicates: List[T => Boolean]#Operators.scala
+takeWhilePredicates:#  def takeWhilePredicates: List[T => Boolean]#Operators.scala
+dropWhilePredicates:#  def dropWhilePredicates: List[T => Boolean]#Operators.scala
+spanPredicates:#  def spanPredicates: List[T => Boolean]#Operators.scala
+segmentLengthPredicates:#  def segmentLengthPredicates: List[T => Boolean]#Operators.scala
+indexWherePredicates:#  def indexWherePredicates: List[T => Boolean]#Operators.scala
+lastIndexWherePredicates:#  def lastIndexWherePredicates: List[T => Boolean]#Operators.scala
+zipPredicates#  private def zipPredicates(kps: List[K => Boolean], vps: List[V => Boolean]): List[((K, V)) => Boolean] = for {#PairOperators.scala
+setup#    def setup(invariant: Tree[String, Int] => Boolean) = forAll(genInput) { case (tree, parm, newTree) =>#redblacktree.scala
+checkBinary#	private def checkBinary(codes: Array[Byte])(reduceProcesses: (ProcessBuilder, ProcessBuilder) => ProcessBuilder)(reduceExit: (Boolean, Boolean) => Boolean) =#process.scala
+myAssert#def myAssert(predicate: () => Boolean) {#by_name_parameters.scala
+byNameAssert#def byNameAssert(predicate: => Boolean) {#by_name_parameters.scala
+filesMatching#  private def filesMatching(matcher: String => Boolean) = {#FileMatcher.scala
+filter#  def filter(f: U => Boolean): Repr  =                 macro QueryMacros.filterImpl[U, Repr]#Query.scala
+customFilter#    def customFilter(f: Int => Boolean)(xs: List[Int]) = {#AboutHigherOrderFunctions.scala
+filter#  def filter(predicate: A => Boolean): Res[A] = res match {#Results.scala
+filter#  def filter(p: A => Boolean)(implicit M: Monad[M]) = {#Results.scala
+withFilter#  def withFilter(p: A => Boolean)(implicit M: Monad[M]) = {#Results.scala
+guardedBy#    def guardedBy(f: ReqRespData => Boolean): Serve#Routes.scala
+guardedBy#    def guardedBy(f: ReqRespData => Boolean) = new Serve {#Routes.scala
+guardedBy#    def guardedBy(f: ReqRespData => Boolean) = new Serve {#Routes.scala
+guardedBy#    def guardedBy(f: ReqRespData => Boolean) = new Serve {#Routes.scala
+guardedBy#      def guardedBy(f: ReqRespData => Boolean) = new Serve {#Routes.scala
+guardedBy#      def guardedBy(f: ReqRespData => Boolean) = new Serve {#Routes.scala
+guardedBy#    def guardedBy(f: ReqRespData => Boolean) = new Serve {#Routes.scala
+guardedBy#      def guardedBy(f: ReqRespData => Boolean) = new Serve {#Routes.scala
+guardedBy#      def guardedBy(f: ReqRespData => Boolean) = new Serve {#Routes.scala
+filter#  def filter(p: A => Boolean)(implicit M: Monad[M]) = {#ResT.scala
+withFilter#  def withFilter(p: A => Boolean)(implicit M: Monad[M]) = filter(p)#ResT.scala
+waitTillCountMatches#  def waitTillCountMatches(indices: Iterable[String] = Nil, `type`: String, target: Int, f: (Long, Long) => Boolean, criteriaDescription: String, seed: Int = defaultSeed, maxFactor: Int = defaultMaxFactor) {#WaitingForGodot.scala
+getFirst#  def getFirst[T](col: GenTraversable[T], predicate: T => Boolean): T = #GenFramework.scala
+getFirstNot#  def getFirstNot[T](col: GenTraversable[T], predicate: T => Boolean): T = #GenFramework.scala
+runFor#  def runFor[T](itr: Iterator[T], resourceNamePrefix: String, index:Int, result: ForResult[T], fun: T => Unit, stopFun: ForResult[_] => Boolean): ForResult[T] = {#Inspectors.scala
+apply#  def apply[T](name: String)(fun: T => Boolean) = #AMatcher.scala
+apply#  def apply[T](name: String)(fun: T => Boolean) = #AnMatcher.scala
+getFirst#  def getFirst[T](col: GenTraversable[T], predicate: T => Boolean): T = #SharedHelpers.scala
+getFirstNot#  def getFirstNot[T](col: GenTraversable[T], predicate: T => Boolean): T = #SharedHelpers.scala
+indexElement#  def indexElement[T](itr: Iterator[T], xs: GenTraversable[T], errorFun: T => Boolean): Array[String] = { #SharedHelpers.scala
+indexLengthElement#  def indexLengthElement[T](itr: Iterator[String], xs: GenTraversable[String], errorFun: String => Boolean): Array[String] = { #SharedHelpers.scala
+indexElementLengthString#  def indexElementLengthString[T](itr: Iterator[String], xs: GenTraversable[String], errorFun: String => Boolean): Array[String] = { #SharedHelpers.scala
+indexElementLengthGenTraversable#  def indexElementLengthGenTraversable[T](itr: Iterator[GenTraversable[T]], xs: GenTraversable[GenTraversable[T]], errorFun: GenTraversable[T] => Boolean): Array[String] = { #SharedHelpers.scala
+indexElementLengthArray#  def indexElementLengthArray[T](itr: Iterator[Array[T]], xs: GenTraversable[Array[T]], errorFun: Array[T] => Boolean): Array[String] = { #SharedHelpers.scala
+indexElementLengthJavaCol#  def indexElementLengthJavaCol[T](itr: Iterator[java.util.Collection[T]], xs: GenTraversable[java.util.Collection[T]], errorFun: java.util.Collection[T] => Boolean): Array[String] = { #SharedHelpers.scala
+indexElementLengthJavaMap#  def indexElementLengthJavaMap[K, V](itr: Iterator[java.util.Map[K, V]], xs: GenTraversable[java.util.Map[K, V]], errorFun: java.util.Map[K, V] => Boolean): Array[String] = { #SharedHelpers.scala
+succeededIndexes#  private def succeededIndexes[T](xs: GenTraversable[T], filterFun: T => Boolean): String = {#SharedHelpers.scala
+failEarlySucceededIndexes#  private def failEarlySucceededIndexes[T](xs: GenTraversable[T], filterFun: T => Boolean, maxSucceed: Int): String = {#SharedHelpers.scala
+filter#  def filter(p: A => Boolean): Promise[A] = {#Promise.scala
+filter#  def filter(f: A => Boolean): Diev[A]#Diev.scala
+filter#    def filter(f: A => Boolean): Diev[A] = foldLeft[Diev[A]](DieVector[A]())((working, value) => if (f(value)) working + value else working)#Diev.scala
+filter#  def filter[AA >: A](p: B => Boolean)(implicit M: Monoid[AA]): (AA \/ B) =#Either.scala
+exists#  def exists[BB >: B](p: BB => Boolean): Boolean =#Either.scala
+forall#  def forall[BB >: B](p: BB => Boolean): Boolean =#Either.scala
+ensure#  def ensure[AA >: A](onLeft: => AA)(f: B => Boolean): (AA \/ B) = this match {#Either.scala
+filter#  def filter[AA >: A](p: B => Boolean)(implicit M: Monoid[AA], F: Functor[F]): EitherT[F, AA, B] =#EitherT.scala
+exists#  def exists(f: B => Boolean)(implicit F: Functor[F]): F[Boolean] =#EitherT.scala
+forall#  def forall(f: B => Boolean)(implicit F: Functor[F]): F[Boolean] =#EitherT.scala
+ensure#  def ensure[AA >: A](onLeft: => AA)(f: B => Boolean)(implicit F: Functor[F]): EitherT[F, AA, B] =#EitherT.scala
+filter#  def filter(p: A => Boolean): EphemeralStream[A] = {#EphemeralStream.scala
+dropWhile#  def dropWhile(p: A => Boolean): EphemeralStream[A] = {#EphemeralStream.scala
+equal#  def equal[A](f: (A, A) => Boolean): Equal[A] = new Equal[A] {#Equal.scala
+split1#  private[scalaz] def split1(pred: V => Boolean, accV: V): (Option[Finger[V, A]], A, Option[Finger[V, A]])#FingerTree.scala
+split1#  private[scalaz] def split1(pred: V => Boolean, accV: V) = (None, a1, None)#FingerTree.scala
+split1#  private[scalaz] def split1(pred: V => Boolean, accV: V) = {#FingerTree.scala
+split1#  private[scalaz] def split1(pred: V => Boolean, accV: V) = {#FingerTree.scala
+split1#  private[scalaz] def split1(pred: V => Boolean, accV: V) = {#FingerTree.scala
+split1#  private[scalaz] def split1(pred: V => Boolean, accV: V): (Option[Finger[V, A]], A, Option[Finger[V, A]]) = fold(#FingerTree.scala
+split#  def split(pred: V => Boolean): (FingerTree[V, A], FingerTree[V, A]) =#FingerTree.scala
+split1#  def split1(pred: V => Boolean): (FingerTree[V, A], A, FingerTree[V, A]) = split1(pred, measurer.monoid.zero)#FingerTree.scala
+split1#  private def split1(pred: V => Boolean, accV: V): (FingerTree[V, A], A, FingerTree[V, A]) = fold(#FingerTree.scala
+fold#  def fold[B](empty: => B, nonempty: (Int, (A, A) => Boolean, Tree[Ranked[A]]) => B): B#Heap.scala
+forall#  def forall(f: A => Boolean) = toStream.forall(f)#Heap.scala
+exists#  def exists(f: A => Boolean) = toStream.exists(f)#Heap.scala
+filter#  def filter(p: A => Boolean): Heap[A] =#Heap.scala
+partition#  def partition(p: A => Boolean): (Heap[A], Heap[A]) =#Heap.scala
+break#  def break(p: A => Boolean): (Heap[A], Heap[A]) =#Heap.scala
+span#  def span(p: A => Boolean): (Heap[A], Heap[A]) =#Heap.scala
+takeWhile#  def takeWhile(p: A => Boolean) =#Heap.scala
+dropWhile#  def dropWhile(p: A => Boolean) =#Heap.scala
+insertWith#  private[scalaz] def insertWith(f: (A, A) => Boolean, x: A) =#Heap.scala
+apply#  def apply[A](sz: Int, leq: (A, A) => Boolean, t: Tree[Ranked[A]]): Heap[A] = new Heap[A] {#Heap.scala
+fold#    def fold[B](empty: => B, nonempty: (Int, (A, A) => Boolean, Tree[Ranked[A]]) => B) =#Heap.scala
+unapply#  def unapply[A](h: Heap[A]): Option[(Int, (A, A) => Boolean, Tree[Ranked[A]])] =#Heap.scala
+minZ#    def minZ[A](f: (A, A) => Boolean): Forest[A] => ForestZipper[A] = {#Heap.scala
+minZp#    def minZp[A](leq: (A, A) => Boolean):#Heap.scala
+heapify#    def heapify[A](leq: (A, A) => Boolean): Tree[Ranked[A]] => Tree[Ranked[A]] = {#Heap.scala
+singletonWith#    def singletonWith[A](f: (A, A) => Boolean, a: A) =#Heap.scala
+skewLink#    def skewLink[A](f: (A, A) => Boolean,#Heap.scala
+link#    def link[A](f: (A, A) => Boolean):#Heap.scala
+skewInsert#    def skewInsert[A](f: (A, A) => Boolean, t: Tree[Ranked[A]], ts: Forest[A]): Forest[A] =#Heap.scala
+getMin#    def getMin[A](f: (A, A) => Boolean, trees: Forest[A]): (Tree[Ranked[A]], Forest[A]) =#Heap.scala
+skewMeld#    def skewMeld[A](f: (A, A) => Boolean, ts: Forest[A], tsp: Forest[A]) =#Heap.scala
+ins#    def ins[A](f: (A, A) => Boolean, t: Tree[Ranked[A]]): Forest[A] => Forest[A] = {#Heap.scala
+uniqify#    def uniqify[A](f: (A, A) => Boolean): Forest[A] => Forest[A] = {#Heap.scala
+unionUniq#    def unionUniq[A](f: (A, A) => Boolean): (Forest[A], Forest[A]) => Forest[A] = {#Heap.scala
+fold#      def fold[B](empty: => B, nonempty: (Int, (A, A) => Boolean, Tree[Ranked[A]]) => B): B = empty#Heap.scala
+fromDataWith#  def fromDataWith[F[_] : Foldable, A](f: (A, A) => Boolean, as: F[A]): Heap[A] =#Heap.scala
+sortWith#  def sortWith[F[_] : Traverse, A](f: (A, A) => Boolean, xs: F[A]): List[A] = fromDataWith(f, xs).toList#Heap.scala
+forall#  def forall(p: (K, V) => Boolean): Boolean =#InsertionMap.scala
+exists#  def exists(p: (K, V) => Boolean): Boolean =#InsertionMap.scala
+filter#  def filter(p: V => Boolean): InsertionMap[K, V] =#InsertionMap.scala
+exists#  def exists(f: (=> B) => Boolean): Boolean =#LazyEither.scala
+forall#  def forall(f: (=> B) => Boolean): Boolean =#LazyEither.scala
+exists#    def exists(f: (=> A) => Boolean): Boolean =#LazyEither.scala
+forall#    def forall(f: (=> A) => Boolean): Boolean =#LazyEither.scala
+exists#  def exists(f: (=> B) => Boolean)(implicit F: Functor[F]): F[Boolean] =#LazyEitherT.scala
+forall#  def forall(f: (=> B) => Boolean)(implicit F: Functor[F]): F[Boolean] =#LazyEitherT.scala
+exists#    def exists(f: (=> A) => Boolean)(implicit F: Functor[F]): F[Boolean] =#LazyEitherT.scala
+forall#    def forall(f: (=> A) => Boolean)(implicit F: Functor[F]): F[Boolean] =#LazyEitherT.scala
+exists#  def exists(f: (=> A) => Boolean): Boolean =#LazyOption.scala
+forall#  def forall(f: (=> A) => Boolean): Boolean =#LazyOption.scala
+filter#  def filter(f: (=> A) => Boolean): LazyOption[A] =#LazyOption.scala
+exists#  def exists(f: (=> A) => Boolean)(implicit F: Functor[F]): F[Boolean] =#LazyOptionT.scala
+forall#  def forall(f: (=> A) => Boolean)(implicit F: Functor[F]): F[Boolean] =#LazyOptionT.scala
+filter#  def filter(f: (=> A) => Boolean)(implicit F: Functor[F]): LazyOptionT[F, A] =#LazyOptionT.scala
+filter#  def filter[A](fa: F[A])(f: A => Boolean) =#MonadPlus.scala
+exists#  def exists(f: A => Boolean)(implicit F: Functor[F]): F[Boolean] = mapO(_.exists(f))#OptionT.scala
+forall#  def forall(f: A => Boolean)(implicit F: Functor[F]): F[Boolean] = mapO(_.forall(f))#OptionT.scala
+fromLessThan#  def fromLessThan[A](a1: A, a2: A)(f: (A, A) => Boolean): Ordering =#Ordering.scala
+exists#  def exists(p: B1 => Boolean, a: A1): Boolean =#PLens.scala
+forall#  def forall(p: B1 => Boolean, a: A1): Boolean =#PLens.scala
+listLookupByPLens#  def listLookupByPLens[K, V](p: K => Boolean): List[(K, V)] @?> V = {#PLens.scala
+streamLookupByPLens#  def streamLookupByPLens[K, V](p: K => Boolean): Stream[(K, V)] @?> V = {#PLens.scala
+ephemeralStreamLookupByPLens#  def ephemeralStreamLookupByPLens[K, V](p: K => Boolean): EphemeralStream[(K, V)] @?> V = {#PLens.scala
+filter#  def filter(p: A => Boolean)(implicit m: Functor[M]): StreamT[M, A] = stepMap {#StreamT.scala
+dropWhile#  def dropWhile(p: A => Boolean)(implicit m: Functor[M]): StreamT[M, A] = stepMap {#StreamT.scala
+takeWhile#  def takeWhile(p: A => Boolean)(implicit m: Functor[M]): StreamT[M, A] = stepMap {#StreamT.scala
+findChild#  def findChild(p: Tree[A] => Boolean): Option[TreeLoc[A]] = {#TreeLoc.scala
+find#  def find(p: TreeLoc[A] => Boolean): Option[TreeLoc[A]] =#TreeLoc.scala
+filter#  def filter[EE >: E](p: A => Boolean)(implicit M: Monoid[EE]): Validation[EE, A] =#Validation.scala
+exists#  def exists(f: A => Boolean): Boolean = this match {#Validation.scala
+forall#  def forall(f: A => Boolean): Boolean = this match {#Validation.scala
+ensure#  def ensure[EE >: E](onFailure: => EE)(f: A => Boolean): Validation[EE, A] = this match {#Validation.scala
+findZ#  def findZ(p: A => Boolean): Option[Zipper[A]] =#Zipper.scala
+findZor#  def findZor[AA >: A](p: A => Boolean, z: => Zipper[AA]): Zipper[AA] =#Zipper.scala
+findBy#  def findBy[AA >: A](f: Zipper[AA] => Option[Zipper[AA]])(p: AA => Boolean): Option[Zipper[AA]] = {#Zipper.scala
+findNext#  def findNext(p: A => Boolean): Option[Zipper[A]] = findBy((z: Zipper[A]) => z.next)(p)#Zipper.scala
+findPrevious#  def findPrevious(p: A => Boolean): Option[Zipper[A]] = findBy((z: Zipper[A]) => z.previous)(p)#Zipper.scala
+append#      def append(f1: Boolean, f2: => Boolean) = f1 && f2#AnyVal.scala
+append#      def append(f1: Boolean, f2: => Boolean) = f1 || f2#AnyVal.scala
+append#    def append(f1: Boolean @@ Disjunction, f2: => Boolean @@ Disjunction) = Disjunction(f1 || f2)#AnyVal.scala
+append#    def append(f1: Boolean @@ Conjunction, f2: => Boolean @@ Conjunction) = Conjunction(f1 && f2)#AnyVal.scala
+filter#  def filter(f: A => Boolean) =#MonadPlusSyntax.scala
+withFilter#  def withFilter(f: A => Boolean) =#MonadPlusSyntax.scala
+equaling#  def equaling(implicit e: Equal[R]): (T, T) => Boolean =#Function1Ops.scala
+forall#  def forall(p: A => Boolean): Boolean =#IoExceptionOr.scala
+exists#  def exists(p: A => Boolean): Boolean =#IoExceptionOr.scala
+filter#  def filter[E, F[_] : Monad](p: E => Boolean): EnumerateeT[E, E, F] =#EnumerateeT.scala
+splitOn#  def splitOn[E, F[_], G[_]](p: E => Boolean)(implicit F: Applicative[F], FE: Monoid[F[E]], G: Monad[G]): EnumerateeT[E, F[E], G] =#EnumerateeT.scala
+filter#  def filter(f: (=> E) => Boolean): Input[E] =#Input.scala
+forall#  def forall(p: (=> E) => Boolean): Boolean =#Input.scala
+exists#  def exists(p: (=> E) => Boolean): Boolean =#Input.scala
+takeWhile#  def takeWhile[A, F[_]](p: A => Boolean)(implicit mon: Monoid[F[A]], pt: Applicative[F]): Iteratee[A, F[A]] = {#Iteratee.scala
+takeUntil#  def takeUntil[A, F[_]](p: A => Boolean)(implicit mon: Monoid[F[A]], pt: Applicative[F]): Iteratee[A, F[A]] =#Iteratee.scala
+groupBy#  def groupBy[A, F[_]](pred: (A, A) => Boolean)(implicit mon: Monoid[F[A]], pr: Applicative[F]): Iteratee[A, F[A]] = {#Iteratee.scala
+filterInput#  def filterInput(p: E => Boolean): IterV[E, A] =#Iteratee.scala
+takeWhile#  def takeWhile[A, F[_]](pred: A => Boolean)(implicit mon: Monoid[F[A]], pr: Applicative[F]): IterV[A, F[A]] = {#Iteratee.scala
+groupBy#  def groupBy[A, F[_]](pred: (A, A) => Boolean)(implicit mon: Monoid[F[A]], pr: Applicative[F]): IterV[A, F[A]] = {#Iteratee.scala
+takeWhileN#    def takeWhileN[A](as: List[A], n: Int)(f: A => Boolean): List[A] = as.takeWhileM[({type λ[α] = State[Int, α]})#λ](a => State {#ListTest.scala
+lookupBy#  def lookupBy(p: QName => Boolean, as: List[Attr]): Option[Str] =#Attr.scala
+filterChildren#  def filterChildren(p: Element => Boolean): List[Element] =#Element.scala
+filterChildrenQname#  def filterChildrenQname(p: QName => Boolean): List[Element] =#Element.scala
+filterChild#  def filterChild(p: Element => Boolean): Option[Element] =#Element.scala
+filterChildQname#  def filterChildQname(p: QName => Boolean): Option[Element] =#Element.scala
+filterElements#  def filterElements(p: Element => Boolean): List[Element] =#Element.scala
+filterElement#  def filterElement(p: Element => Boolean): Option[Element] =#Element.scala
+filterElementsQname#  def filterElementsQname(p: QName => Boolean): List[Element] =#Element.scala
+filterElementQname#  def filterElementQname(p: QName => Boolean): Option[Element] =#Element.scala
+findAttrBy#  def findAttrBy(p: QName => Boolean): Option[Str] =#Element.scala
+!!#  def !!(p: QName => Boolean): Option[Str] =#Element.scala
+??#  def ??(p: QName => Boolean): Boolean =#Element.scala
+findAttrByOr#  def findAttrByOr(p: QName => Boolean, s: => Str): Str =#Element.scala
+filterAttrsBy#  def filterAttrsBy(p: Attr => Boolean): Element =#Element.scala
+filterAttrsKeyBy#  def filterAttrsKeyBy(p: QName => Boolean): Element =#Element.scala
+filterAttrsKeyNameBy#  def filterAttrsKeyNameBy(p: Str => Boolean): Element =#Element.scala
+filterAttrsKeySnameBy#  def filterAttrsKeySnameBy(p: String => Boolean): Element =#Element.scala
+removeAttrsBy#  def removeAttrsBy(p: Attr => Boolean): Element =#Element.scala
+removeAttrsKeyBy#  def removeAttrsKeyBy(p: QName => Boolean): Element =#Element.scala
+removeAttrsKeyNameBy#  def removeAttrsKeyNameBy(p: Str => Boolean): Element =#Element.scala
+removeAttrsKeySnameBy#  def removeAttrsKeySnameBy(p: String => Boolean): Element =#Element.scala
+breakk#  private[xml] def breakk[A, B](p: A => Boolean, xs: List[(B, A)]): (List[A], List[(B, A)]) = {#Token.scala
+breakn#  private[xml] def breakn[A, B](p: A => Boolean, xs: List[(B, A)]): (List[A], List[(B, A)]) = {#Token.scala
+findLeft#  def findLeft(p: Cursor => Boolean): Option[Cursor] =#Cursor.scala
+findLeftOr#  def findLeftOr(p: Cursor => Boolean, c: => Cursor): Cursor =#Cursor.scala
+findRight#  def findRight(p: Cursor => Boolean): Option[Cursor] =#Cursor.scala
+findRightOr#  def findRightOr(p: Cursor => Boolean, c: => Cursor): Cursor =#Cursor.scala
+findChild#  def findChild(p: Cursor => Boolean): Option[Cursor] =#Cursor.scala
+findChildOr#  def findChildOr(p: Cursor => Boolean, c: => Cursor): Cursor =#Cursor.scala
+findChildElementQname#  def findChildElementQname(p: QName => Boolean): Option[Cursor] =#Cursor.scala
+findChildElementQnameOr#  def findChildElementQnameOr(p: QName => Boolean, c: => Cursor): Cursor =#Cursor.scala
+findChildElementName#  def findChildElementName(p: String => Boolean): Option[Cursor] =#Cursor.scala
+findChildElementNameOr#  def findChildElementNameOr(p: String => Boolean, c: => Cursor): Cursor =#Cursor.scala
+findRec#  def findRec(p: Cursor => Boolean): Option[Cursor] =#Cursor.scala
+findRecOr#  def findRecOr(p: Cursor => Boolean, c: => Cursor): Cursor =#Cursor.scala
+predicate#  def predicate[A](p: A => Boolean, n: Option[List[Char]] = None): Predicate[A] =#Predicate.scala
+npredicate#  def npredicate[A](p: A => Boolean, n: String): Predicate[A] =#Predicate.scala
+predPredicateL#  def predPredicateL[A1, A2]: LensFamily[Predicate[A1], Predicate[A2], A1 => Boolean, A2 => Boolean] =#Predicate.scala
+setShortEmptyTag#  def setShortEmptyTag(p: QName => Boolean): Config =#Config.scala
+notShortEmptyTag:#  def notShortEmptyTag: QName => Boolean =#Config.scala
+config#  def config(short_empty_tag: QName => Boolean = _ => true, prettify: Option[Str] = None): Config = {#Config.scala
+riakKey#  def riakKey(p: String => Boolean = (s => true))(obj: ReadObject): ValidationNel[Throwable, String] =#package.scala
+stringValue#  def stringValue(p: String => Boolean = (s => true))(obj: ReadObject): ValidationNel[Throwable, String] =#package.scala
+bytesValue#  def bytesValue(p: Array[Byte] => Boolean = (s => true))(obj: ReadObject): ValidationNel[Throwable, Array[Byte]] =#package.scala
+links#  def links(p: Option[NonEmptyList[ScaliakLink]] => Boolean = (s => true))(obj: ReadObject): ValidationNel[Throwable, Option[NonEmptyList[ScaliakLink]]] =#package.scala
+nonEmptyLinks#  def nonEmptyLinks(p: NonEmptyList[ScaliakLink] => Boolean = (s => true))(obj: ReadObject): ValidationNel[Throwable, NonEmptyList[ScaliakLink]] =#package.scala
+riakMetadata#  def riakMetadata(key: String, p: String => Boolean = (s => true))(obj: ReadObject): ValidationNel[Throwable, String] =#package.scala
+readValue#  private[mapping] def readValue[T](name: String, pf: T => Boolean, vf: ReadObject => T, obj: ReadObject): ValidationNel[Throwable, T] = {#package.scala
+validator:#  def validator: (TypeTag[_], Any) => Boolean#CliOptions.scala
+filter#  def filter(p: A => Boolean) =#ScallopOption.scala
+filterNot#  def filterNot(p: A => Boolean) =#ScallopOption.scala
+withFilter#  def withFilter(p: A => Boolean) = new WithFilter(p)#ScallopOption.scala
+withFilter#    def withFilter(q: A => Boolean) = new WithFilter(x => p(x) && q(x))#ScallopOption.scala
+filter#  def filter(f: T=>Boolean): EventStream[T] = source.filter(f)#EventStreamSourceProxy.scala
+takeWhile#  def takeWhile(p: T=>Boolean): EventStream[T] = source.takeWhile(p)#EventStreamSourceProxy.scala
+forall#  def forall(p: V => Boolean): Boolean =#Association1.scala
+exists#  def exists(p: V => Boolean): Boolean =#Association1.scala
+find#  def find(p: V => Boolean): Option[V] =#Association1.scala
+filter#  def filter(p: A => Boolean): Iterable[A] =#Iterable1.scala
+partition#  def partition(p: A => Boolean): BreakIterable1[A] = {#Iterable1.scala
+forall#  def forall(p: A => Boolean): Boolean =#Iterable1.scala
+exists#  def exists(p: A => Boolean): Boolean =#Iterable1.scala
+count#  def count(p: A => Boolean): Int = {#Iterable1.scala
+find#  def find(p: A => Boolean): Option[A] =#Iterable1.scala
+takeWhile#  def takeWhile(p: A => Boolean): Iterable[A] =#Iterable1.scala
+dropWhile#  def dropWhile(p: A => Boolean): Iterable[A] =#Iterable1.scala
+span#  def span(p: A => Boolean): BreakIterable1[A] = {#Iterable1.scala
+filter#  def filter(p: A => Boolean): Iterator[A] =#Iterator1.scala
+withFilter#  def withFilter(p: A => Boolean): Iterator[A] =#Iterator1.scala
+filterNot#  def filterNot(p: A => Boolean): Iterator[A] =#Iterator1.scala
+takeWhile#  def takeWhile(p: A => Boolean): Iterator[A] =#Iterator1.scala
+partition#  def partition(p: A => Boolean): BreakIterator1[A] = {#Iterator1.scala
+span#  def span(p: A => Boolean): BreakIterator1[A] = {#Iterator1.scala
+dropWhile#  def dropWhile(p: A => Boolean): Iterator[A] =#Iterator1.scala
+forall#  def forall(p: A => Boolean): Boolean =#Iterator1.scala
+exists#  def exists(p: A => Boolean): Boolean =#Iterator1.scala
+find#  def find(p: A => Boolean): Option[A] =#Iterator1.scala
+indexWhere#  def indexWhere(p: A => Boolean): Int =#Iterator1.scala
+mkCaseWireFormat#  def mkCaseWireFormat[T : Manifest](apply: () => T, unapply: T => Boolean): WireFormat[T] = new Case0WireFormat(apply, unapply)#WireFormat.scala
+getOrSetBoolean#    def getOrSetBoolean(key: String, defaultValue: =>Boolean): Boolean = {#Configurations.scala
+debug#    def debug(condition: T => Boolean, display: T => String): T    = if (condition(evaluated)) debug(display) else evaluated#Loggable.scala
+debugNot#    def debugNot(condition: T => Boolean, display: T => String): T = debug(!condition, display)#Loggable.scala
+selectNode:#  def selectNode: CompNode => Boolean#Layering.scala
+isEndNode:#  def isEndNode: CompNode => Boolean = attr { n =>#MscrsDefinition.scala
+isMaterialised:#  def isMaterialised: CompNode => Boolean = attr {#MscrsDefinition.scala
+isCheckpoint:#  def isCheckpoint: CompNode => Boolean = attr {#MscrsDefinition.scala
+isGbkOutput:#  def isGbkOutput: CompNode => Boolean = attr {#MscrsDefinition.scala
+isReducingNode:#  def isReducingNode: CompNode => Boolean = attr {#MscrsDefinition.scala
+addJarEntries#  private def addJarEntries(jarFile: String, p: JarEntry => Boolean) {#JarBuilder.scala
+relatedElements#  def relatedElements(relation: (Int, Int) => Boolean) = (group: NonEmptyList[Int]) => {#SeqsSpec.scala
+transitiveElements#  def transitiveElements(relation: (Int, Int) => Boolean) = (group: NonEmptyList[Int]) => {#SeqsSpec.scala
+transitivePath#  def transitivePath[A](group: Seq[A], relation: (A, A) => Boolean): Seq[A] = {#SeqsSpec.scala
+relatedElementsAcrossGroups#  def relatedElementsAcrossGroups(relation: (Int, Int) => Boolean) =#SeqsSpec.scala
+find#    def find(p: Q => Boolean)(a: A): Option[Q]#deepsearch.scala
+find#    def find(p: A => Boolean)(a: A) = if (p(a)) Some(a) else None#deepsearch.scala
+find#      def find(p: Q => Boolean)(a: List[A]) = a.flatMap(s.find(p)).headOption#deepsearch.scala
+find#    def find(p: Q => Boolean)(a: HNil) = None#deepsearch.scala
+find#    def find(p: Q => Boolean)(a: H :: T) =#deepsearch.scala
+find#    def find(p: Q => Boolean)(a: A) = s.find(p)(gen to a)#deepsearch.scala
+deepFind#    def deepFind[Q](p: Q => Boolean)(implicit s: Searchable[A, Q]) =#deepsearch.scala
+pruneSplits#  def pruneSplits(splitsFilterFunc: Int => Boolean): RDD[T] =#EnhancedRDD.scala
+ensure#  def ensure[T](data: T, dataName: String)(errorDesc: String)(errorCond: (T) => Boolean) : V[T] = {#Validator.scala
+failUnderCond#  protected def failUnderCond[T](param: T, cond: (T) => Boolean, errorStr: => String) : V[T] = param match {#Validator.scala
+ifFirstWrapSecond#  def ifFirstWrapSecond[T](x: => Boolean, y: => T) : Option[T] = if (x) Some(y) else None#Util.scala
+exists#  def exists           (p: T => Boolean)      : Boolean     =    !isEmpty && p(this.get)#Param.scala
+findNode#  def findNode(p: Node => Boolean): Option[Node] = {#Util.scala
+filter#  def filter    ( projection: T => Boolean )              : ImplicitQueryable[T] = macro ImplicitQueryableMacros.filter[T]#ImplicitQueryable.scala
+withFilter#  def withFilter( projection: T => Boolean )              : ImplicitQueryable[T] = macro ImplicitQueryableMacros.filter[T]#ImplicitQueryable.scala
+filter#  def filter( projection: T => Boolean ) : BaseQueryable[T] = SLICK_INTERNAL#Queryable.scala
+filter#  def filter( projection: T => Boolean ) : Queryable[T] = macro QueryableMacros.filter[T]#Queryable.scala
+withFilter#  def withFilter( projection: T => Boolean ) : Queryable[T] = macro QueryableMacros.filter[T]  #Queryable.scala
+view#  def view(discriminatorPos: Int, dataPos: Int, discriminator: (PositionedResult => Boolean)): PositionedResult = new PositionedResult(rs) {#PositionedResult.scala
+filter#  def filter(f: PP => Boolean): Parameters[PU, PP] =#Parameters.scala
+withFilter#  def withFilter(f: PP => Boolean) = filter(f)#Parameters.scala
+filter#  def filter(f: T => Boolean): RDD[T] = new FilteredRDD(this, sc.clean(f))#RDD.scala
+create#  def create[T](rdd: RDD[T], partitionFilterFunc: Int => Boolean) = {#PartitionPruningRDD.scala
+filter#  override def filter(p: ((A, B)) => Boolean): Map[A, B] = {#TimeStampedHashMap.scala
+readWhile#  private def readWhile(cond: String => Boolean) = {#SparkILoop.scala
+breakIf#  def breakIf[T: Manifest](assertion: => Boolean, args: NamedParam*): Unit =#SparkILoop.scala
+filter#  def filter(filterFunc: T => Boolean): DStream[T] = new FilteredDStream(this, filterFunc)#DStream.scala
+intSearch#  private def intSearch(f: Int => Boolean): Int = {#NRoot.scala
+until#  def until(pred: A => Boolean): Dist[Seq[A]] = {#Dist.scala
+unfold#  def unfold[B](init: B)(f: (B, A) => B)(pred: B => Boolean): Dist[B] = {#Dist.scala
+iterateUntil#  def iterateUntil(pred: A => Boolean, f: A => Dist[A]): Dist[A] = new Dist[A] {#Dist.scala
+pr#  def pr(pred: A => Boolean, n: Int)(implicit gen: Generator): Double =#Dist.scala
+cfor#  def cfor[A](init:A)(test:A => Boolean, next:A => A)(body:A => Unit): Unit =#Syntax.scala
+test:#    def test: Int => Boolean = { v += 1; _ < 3 }#CforTest.scala
+apply#  def apply[A](f: A => Boolean) = new Predicate[A] {#Predicate.scala
+job#  def job(body: => Boolean): Unit = {#Utils.scala
+apply#  def apply[I:Manifest](function: (I, Map[String, _]) => Boolean) = new SendingEndpointComposition(null, new MessageFilter(target = new ParsedMessageScalaFunctionWrapper(function))) {#FilterEndpointDsl.scala
+filtered#  def filtered(filterFunction:((CalculationPeriod, Payoff, Callability)) => Boolean):ScheduledPayoffs = #ScheduledPayoffs.scala
+checkCondition#  def checkCondition(check: String => Boolean)(f: String => Request[AnyContent] => Result) = withAuth {user => request =>#Auth.scala
+when#  def when(conditionedValidation: A => Boolean) = {#SimpleValidationRuleBuilder.scala
+must#  def must(ruleExpression: B => Boolean) = {#SimpleValidationRuleBuilder.scala
+be#  def be[A](value: A): (A => Boolean) = _ == value#package.scala
+equal#  def equal[A](value: A): (A => Boolean) = _ == value#package.scala
+applyNotFunctor#    private def applyNotFunctor(expression: B => Boolean) = {#package.scala
+mustNot#    def mustNot(ruleExpression: B => Boolean) = {#package.scala
+must#      override def must(ruleExpression: B => Boolean) = {#package.scala
+shortestPathTo#  def shortestPathTo(goal: Point, field: Field, isMovable: Point => Boolean): Option[List[Direction]] = {#Point.scala
+flatMap#  def flatMap(prune:ImmutableVertex => Boolean,transform:(ImmutableVertex,Set[ImmutableVertex]) => Set[ImmutableVertex]):ImmutableVertex = {#ImmutableVertex.scala
+visit#  def visit(prune:ImmutableVertex => Boolean,visit:ImmutableVertex => Unit) {#ImmutableVertex.scala
+flatMap#  private def flatMap(prune:ImmutableVertex => Boolean,transform:(ImmutableVertex,Set[ImmutableVertex]) => Set[ImmutableVertex]):Configuration = {#Configuration.scala
+visit#  private def visit(prune:ImmutableVertex => Boolean,visit:ImmutableVertex => Unit) {#Configuration.scala
+existsPair#      def existsPair[A](items: Iterable[A])(fn: (A,A) => Boolean): Boolean = {#ThreadSafeTestSuite.scala
+existsPairHelper#        def existsPairHelper[A](first:A,rest:Iterable[A])(fn: (A,A) => Boolean): Boolean =#ThreadSafeTestSuite.scala
+filter#  def filter(fn: T => Boolean): Scheme[T] =#Scheme.scala
+filter#  def filter(fn: T => Boolean): Spout[T] =#Spout.scala
+runWhile#  def runWhile[S,V](initState:S)(sf:State[S,V])(t:(S => Boolean)):(S, V) = {#package.scala
+isAssociativeEq#  def isAssociativeEq[T : Semigroup : Arbitrary](eqfn : (T,T) => Boolean) = forAll { (a : T, b : T, c : T) =>#BaseProperties.scala
+isCommutativeEq#  def isCommutativeEq[T : Semigroup : Arbitrary](eqfn: (T,T) => Boolean) = forAll { (a:T,b:T)=>#BaseProperties.scala
+semigroupLawsEq#  def semigroupLawsEq[T : Semigroup : Arbitrary](eqfn : (T,T) => Boolean) = isAssociativeEq[T](eqfn)#BaseProperties.scala
+commutativeSemigroupLawsEq#  def commutativeSemigroupLawsEq[T : Semigroup : Arbitrary](eqfn : (T,T) => Boolean) =#BaseProperties.scala
+validZeroEq#  def validZeroEq[T : Monoid : Arbitrary](eqfn : (T,T) => Boolean) = forAll { (a : T) =>#BaseProperties.scala
+monoidLawsEq#  def monoidLawsEq[T : Monoid : Arbitrary](eqfn : (T,T) => Boolean) =#BaseProperties.scala
+commutativeMonoidLawsEq#  def commutativeMonoidLawsEq[T : Monoid : Arbitrary](eqfn : (T,T) => Boolean) =#BaseProperties.scala
+groupLawsEq#  def groupLawsEq[T : Group : Arbitrary](eqfn : (T,T) => Boolean) = monoidLawsEq[T](eqfn) && hasAdditiveInverses[T]#BaseProperties.scala
+isEqualIfZero#  def isEqualIfZero[F, C[_]](eqfn: (C[F], C[F]) => Boolean)(implicit vs: VectorSpace[F, C], arb: Arbitrary[C[F]]) =#BaseVectorSpaceProperties.scala
+distributesWithPlus#  def distributesWithPlus[F, C[_]](eqfn: (C[F], C[F]) => Boolean)(implicit vs: VectorSpace[F, C], arbC: Arbitrary[C[F]], arbF: Arbitrary[F]) =#BaseVectorSpaceProperties.scala
+isAssociative#  def isAssociative[F, C[_]](eqfn: (C[F], C[F]) => Boolean)(implicit vs: VectorSpace[F, C], arbC: Arbitrary[C[F]], arbF: Arbitrary[F]) =#BaseVectorSpaceProperties.scala
+identityOne#  def identityOne[F, C[_]](eqfn: (C[F], C[F]) => Boolean)(implicit vs: VectorSpace[F, C], arb: Arbitrary[C[F]]) =#BaseVectorSpaceProperties.scala
+distributesOverScalarPlus#  def distributesOverScalarPlus[F, C[_]](eqfn: (C[F], C[F]) => Boolean)(implicit vs: VectorSpace[F, C], arbC: Arbitrary[C[F]], arbF: Arbitrary[F]) =#BaseVectorSpaceProperties.scala
+vectorSpaceLaws#  def vectorSpaceLaws[F, C[_]](eqfn: (C[F], C[F]) => Boolean)(implicit vs: VectorSpace[F, C], arbC: Arbitrary[C[F]], arbF: Arbitrary[F]) =#BaseVectorSpaceProperties.scala
+leftIdentity#  def leftIdentity[M[_],T,U](eq: (M[U],M[U]) => Boolean = defaultEq[M[U]])#MonadLaws.scala
+rightIdentity#  def rightIdentity[M[_],T](eq: (M[T],M[T]) => Boolean = defaultEq[M[T]])#MonadLaws.scala
+associative#  def associative[M[_],T,U,V](eq: (M[V],M[V]) => Boolean)#MonadLaws.scala
+monadLaws#  def monadLaws[M[_],T,U,R](eq: (M[R],M[R]) => Boolean = defaultEq[M[R]])#MonadLaws.scala
+isEqualIffZero#  def isEqualIffZero[T : Metric : Arbitrary](eqfn: (T, T) => Boolean) = forAll { (a: T, b: T) =>#MetricProperties.scala
+metricLaws#  def metricLaws[T : Metric : Arbitrary](eqfn: (T, T) => Boolean) =#MetricProperties.scala
+chunk#  def chunk[T](items: List[T], acc: List[List[T]] = Nil)(pred: T => Boolean): List[List[T]] = {#RightFolded2Test.scala
+toContainer#  def toContainer[A, B, C <: TraversableOnce[A], D <: TraversableOnce[B]](goodInv: (D,C) => Boolean)(implicit inj: Injection[A, B], cd: CanBuildFrom[Nothing, B, D],#CollectionInjections.scala
+fn2Predicate#  implicit def fn2Predicate[T, U](implicit bij: ImplicitBijection[T, U]): Bijection[T => Boolean, Predicate[U]] =#GuavaBijections.scala
+apply#      override def apply(fn: T => Boolean) = new Predicate[U] {#GuavaBijections.scala
+test#  def test(n: Int, f: => Boolean) {#IsActivelyTracing.scala
+getBooleanOrElse#  def getBooleanOrElse(name: String, default: => Boolean): Boolean =#ParamMap.scala
+test:#  def test: TransactionalStatsProvider => Boolean#GizzardServer.scala
+this#  def this(fullPath: String, syncJournal: => Boolean) =#Journal.scala
+filter#  def filter(f: A => Boolean) = flatMap {a =>#Rule.scala
+cond#  def cond(f: S => Boolean) = get filter f#Rules.scala
+repeatUntil#  def repeatUntil[T, X](rule: Rule[T => T, X])(finished: T => Boolean)#Rules.scala
+count#  def count[T:TupleConverter](fieldDef : (Fields, Fields))(fn : T => Boolean) : Self = {#ReduceOperations.scala
+forall#  def forall[T:TupleConverter](fieldDef : (Fields,Fields))(fn : (T) => Boolean) : Self = {#ReduceOperations.scala
+sortWithTake#  def sortWithTake[T:TupleConverter](f : (Fields, Fields), k : Int)(lt : (T,T) => Boolean) : Self = {#ReduceOperations.scala
+filter#  def filter[A](f : Fields)(fn : (A) => Boolean)#RichPipe.scala
+dropWhile#   def dropWhile[T](f : Fields)(fn : (T) => Boolean)(implicit conv : TupleConverter[T]) : Self = {#StreamOperations.scala
+takeWhile#  def takeWhile[T](f : Fields)(fn : (T) => Boolean)(implicit conv : TupleConverter[T]) : Self = {#StreamOperations.scala
+filter#  def filter(f: T => Boolean): TypedPipe[T] = {#TypedPipe.scala
+count#  def count(fn : T => Boolean) : TypedPipe[(K,Long)] = {#TypedPipe.scala
+forall#  def forall(fn : T => Boolean) : TypedPipe[(K,Boolean)] = {#TypedPipe.scala
+dropWhile#  def dropWhile(p: (T) => Boolean): KeyedList[K, T] = {#TypedPipe.scala
+takeWhile#  def takeWhile(p: (T) => Boolean) : KeyedList[K, T] = {#TypedPipe.scala
+sortWith#  def sortWith(lt : (T,T) => Boolean) : Grouped[K,T] = {#TypedPipe.scala
+filterValues#  def filterValues(fn : (ValT) => Boolean) : Matrix[RowT,ColT,ValT] = {#Matrix.scala
+filterPathFinderClasspath#  def filterPathFinderClasspath(finder: PathFinder)(f: (ModuleID => Boolean)): PathFinder =#ManagedClasspathFilter.scala
+filter#  def filter(pred: ((K, V)) => Boolean): MutableCache[K, V] =#MutableCache.scala
+selectFirstSuccessfulTrial#  def selectFirstSuccessfulTrial[T](futures: Seq[Future[T]])(pred: T => Boolean): Future[T] =#FutureOps.scala
+find#  def find[T](futures: Stream[Future[T]])(pred: T => Boolean): Future[T] =#FutureOps.scala
+select#  def select[K, V](stores: Seq[ReadableStore[K, V]])(pred: Option[V] => Boolean): ReadableStore[K, V] =#ReadableStore.scala
+find#  def find[K, V](stores: Seq[ReadableStore[K, V]])(pred: Option[V] => Boolean): ReadableStore[K, V] =#ReadableStore.scala
+withRetry#  def withRetry[K, V](store: ReadableStore[K, V], backoffs: Iterable[Duration])(pred: Option[V] => Boolean)(implicit timer: Timer): ReadableStore[K, V] =#ReadableStore.scala
+select#  def select[K, V](stores: Seq[Store[K, V]])(pred: Option[V] => Boolean)(implicit collect: FutureCollector[Unit]): Store[K, V] =#Store.scala
+withRetry#  def withRetry[K, V](store: Store[K, V], backoffs: Iterable[Duration])(pred: Option[V] => Boolean)(implicit timer: Timer): Store[K, V] =#Store.scala
+loopWhile#  def loopWhile(cond: => Boolean)(body: => Unit): Unit =#Actor.scala
+get#  def get(n: Int)(p: Any => Boolean): Option[Any] = {#MessageQueue.scala
+remove#  def remove(n: Int)(p: Any => Boolean): Option[(Any, OutputChannel[Any])] = {#MessageQueue.scala
+extractFirst#  def extractFirst(p: Any => Boolean): MessageQueueElement = {#MessageQueue.scala
+filter#  def filter(f: A => Boolean): Future[Spool[A]] = collect {#Spool.scala
+whileDo#  def whileDo[A](p: => Boolean)(f: => Future[A]): Future[Unit] = {#Future.scala
+filter#  def filter(p: A => Boolean): Future[A] = transform { x: Try[A] => Future.const(x.filter(p)) }#Future.scala
+withFilter#  def withFilter(p: A => Boolean): Future[A] = filter(p)#Future.scala
+removeWhere#  def removeWhere(fn: A=>Boolean): Int = {#RingBuffer.scala
+agent#  def agent[A](pf: String => Boolean) =#agents.scala
+pred#  def pred[E,A](p: A => Boolean): Option[A] => Option[A] =#params.scala
+pred#  def pred[E,A](p: A => Boolean, err: A => E): Reporter[E,A,A] =#params.scala
+__ifThenElse#  override def __ifThenElse[T](cond: =>Boolean, thenp: => T, elsep: => T) = cond match {#IfThenElse.scala
+satisfies#  def satisfies(p: Int => Boolean): Names = #TestQueries.scala
+any#  def any[A](xs: List[A])(p: A => Boolean): Boolean =#TestQueries.scala
+all#  def all[A](xs: List[A])(p: A => Boolean): Boolean =#TestQueries.scala
+gameFinder:#    def gameFinder: Game => Boolean = { (game: Game) =>#MainUpdateServiceImpl.scala
+findAncestorOrSelfPath#  def findAncestorOrSelfPath(p: ElemPath => Boolean): Option[ElemPath] = {#ElemPath.scala
+findAncestorPath#  def findAncestorPath(p: ElemPath => Boolean): Option[ElemPath] = {#ElemPath.scala
+filterChildElems#  def filterChildElems(p: E => Boolean): immutable.IndexedSeq[E]#ParentElemApi.scala
+filterElems#  def filterElems(p: E => Boolean): immutable.IndexedSeq[E]#ParentElemApi.scala
+filterElemsOrSelf#  def filterElemsOrSelf(p: E => Boolean): immutable.IndexedSeq[E]#ParentElemApi.scala
+findChildElem#  def findChildElem(p: E => Boolean): Option[E]#ParentElemApi.scala
+findElem#  def findElem(p: E => Boolean): Option[E]#ParentElemApi.scala
+findElemOrSelf#  def findElemOrSelf(p: E => Boolean): Option[E]#ParentElemApi.scala
+findTopmostElems#  def findTopmostElems(p: E => Boolean): immutable.IndexedSeq[E]#ParentElemApi.scala
+findTopmostElemsOrSelf#  def findTopmostElemsOrSelf(p: E => Boolean): immutable.IndexedSeq[E]#ParentElemApi.scala
+getChildElem#  def getChildElem(p: E => Boolean): E#ParentElemApi.scala
+\#  def \(p: E => Boolean): immutable.IndexedSeq[E]#ParentElemApi.scala
+\\#  def \\(p: E => Boolean): immutable.IndexedSeq[E]#ParentElemApi.scala
+\\!#  def \\!(p: E => Boolean): immutable.IndexedSeq[E]#ParentElemApi.scala
+filterChildElemPaths#  def filterChildElemPaths(p: E => Boolean): immutable.IndexedSeq[ElemPath]#PathAwareElemApi.scala
+findChildElemPath#  def findChildElemPath(p: E => Boolean): Option[ElemPath]#PathAwareElemApi.scala
+getChildElemPath#  def getChildElemPath(p: E => Boolean): ElemPath#PathAwareElemApi.scala
+filterElemOrSelfPaths#  def filterElemOrSelfPaths(p: E => Boolean): immutable.IndexedSeq[ElemPath]#PathAwareElemApi.scala
+filterElemPaths#  def filterElemPaths(p: E => Boolean): immutable.IndexedSeq[ElemPath]#PathAwareElemApi.scala
+findTopmostElemOrSelfPaths#  def findTopmostElemOrSelfPaths(p: E => Boolean): immutable.IndexedSeq[ElemPath]#PathAwareElemApi.scala
+findTopmostElemPaths#  def findTopmostElemPaths(p: E => Boolean): immutable.IndexedSeq[ElemPath]#PathAwareElemApi.scala
+findElemOrSelfPath#  def findElemOrSelfPath(p: E => Boolean): Option[ElemPath]#PathAwareElemApi.scala
+findElemPath#  def findElemPath(p: E => Boolean): Option[ElemPath]#PathAwareElemApi.scala
+findErasedTypes#  private def findErasedTypes(tpes: Set[Type], p: Type => Boolean, ignoredTypes: Set[Type] = Set()): Set[Type] = {#CodingPracticesTest.scala
+findErasedTypesInType#  private def findErasedTypesInType(tpe: Type, p: Type => Boolean): Set[Type] = {#CodingPracticesTest.scala

@@ -1,0 +1,3 @@
+root /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/github/lf
+report /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/lf-report.txt
+workdir /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/

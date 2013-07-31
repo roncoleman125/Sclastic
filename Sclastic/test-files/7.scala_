@@ -1,0 +1,4 @@
+class A {
+  def foo =
+    if(0) true else false
+}
