@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Scaly Contributors
+ * Copyright (c) Sclastic Contributors
  * See CONTRIBUTORS.TXT for a full list of copyright holders.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,15 +24,15 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package scaly.cyclomatic
+package scaly.sclastic
 
 import scaly.sclastic.compiler.MethodsCompiler._
 import scaly.sclastic.util.ParserHelper._
 import scaly.sclastic.compiler.Parser._
 import scaly.sclastic.util.Config
 
-/** This object contains convenience methods to invoke the Scala-omatic compiler */
-object Rockit {
+/** This object contains convenience methods to invoke the Scala elastic compiler */
+object Sclastic {
     /** This method estimates the complexity of a Scala file */
 	def estimate(filename: String): List[Descriptor] = {
 	  val delines = dede(filename)
