@@ -1,0 +1,6 @@
+root /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/github
+report /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/list-hofs-report.txt
+workdir /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/
+# Forces running to use the default List hofs
+hofdb bogus
+lint false

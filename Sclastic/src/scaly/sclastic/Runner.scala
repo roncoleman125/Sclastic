@@ -93,7 +93,7 @@ object Runner {
       val input = zip.split(java.io.File.separator).last
 
       // Send progress report to user
-      print((numZips-count)+": processing "+input+"...")
+      print((numZips-count)+": processing "+input+" ...")
       Console.out.flush
       
       out.println("** " + zip)
@@ -108,6 +108,10 @@ object Runner {
       val entries = rootzip.entries.asScala
 
       // Process each file in turn in the zip
+      var methodsPerEntry = 0
+      val countStrippedStart = countStripped
+      val countRawStart = countRaw
+      
       val stats = entries.foldLeft(List[MethodsCompiler.Descriptor]()) { (stats, entry) =>
         try {
           // Process an entry in the zip
@@ -133,6 +137,8 @@ object Runner {
                   complexities(m) += 1
                   lengths(len) += 1
 
+                  methodsPerEntry += 1
+                  
                   totalMethods += 1
                 }
               }
@@ -176,7 +182,10 @@ object Runner {
 
         val dt = endt - startt
 
-        println("done! r=%4.2f hofs=%d %4.1f s".format(result.r, dh, dt / 1000.0))
+        val rawPerEntry = countRaw - countRawStart
+        val strippedPerEntry = countStripped - countStrippedStart
+        
+        println("done! r=%4.2f hofs=%d %d %d %d %4.1f s".format(result.r, dh, methodsPerEntry, rawPerEntry, strippedPerEntry, dt / 1000.0))
 
         totalt += dt
       }

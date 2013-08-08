@@ -476,9 +476,13 @@ object Parser {
     else if(k == tokens.size-1)
       false
       
-    // Method without a function
+    // Method without a function object
     else if(k < tokens.size-2 && tokens(k+1) == "(" && tokens(k+2) == ")")
       false
+      
+   // Method without a function object
+   else if(k < tokens.size-1 && (tokens(k+1) == ")" || tokens(k+1) == "."))
+     false
     
     // This is PROBABLY an HOF
     else   

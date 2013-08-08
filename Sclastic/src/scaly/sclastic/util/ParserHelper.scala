@@ -369,7 +369,7 @@ object ParserHelper {
         case _ =>
           s + c.toString
       }
-    }
+    }.trim.replaceAll("\\s\\s"," ")
   }
   
   def tokenize(tokens: Array[String],token: String): Int = {

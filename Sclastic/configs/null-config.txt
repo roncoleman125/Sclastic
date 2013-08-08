@@ -1,0 +1,5 @@
+root /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/github
+report /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/report-null.txt
+workdir /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/
+hofdb /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/no-hofs.txt
+lint false
