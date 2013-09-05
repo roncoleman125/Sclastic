@@ -108,7 +108,12 @@ object Runner {
       val entries = rootzip.entries.asScala
 
       // Process each file in turn in the zip
-      var methodsPerEntry = 0
+      var methodsPerProj = 0
+      var summPerProj = 0
+      var summ2PerProj = 0
+      var sumlenPerProj = 0
+      var sumlen2PerProj = 0
+      
       val countStrippedStart = countStripped
       val countRawStart = countRaw
       
@@ -137,7 +142,15 @@ object Runner {
                   complexities(m) += 1
                   lengths(len) += 1
 
-                  methodsPerEntry += 1
+                  methodsPerProj += 1
+                  
+                  summPerProj += m
+                  
+                  summ2PerProj += m*m
+                  
+                  sumlenPerProj += len
+                  
+                  sumlen2PerProj += len * len
                   
                   totalMethods += 1
                 }
@@ -185,7 +198,18 @@ object Runner {
         val rawPerEntry = countRaw - countRawStart
         val strippedPerEntry = countStripped - countStrippedStart
         
-        println("done! r=%4.2f hofs=%d %d %d %d %4.1f s".format(result.r, dh, methodsPerEntry, rawPerEntry, strippedPerEntry, dt / 1000.0))
+//                  var summPerProj = 0
+//      			var summ2PerProj = 0
+//      			var sumlenPerProj = 0
+//      			var sumlen2PerProj = 0
+
+        val um = summPerProj / methodsPerProj.toDouble
+        val sm = Statistics.stdev(summPerProj, summ2PerProj, methodsPerProj)
+        val ulen = sumlenPerProj / methodsPerProj.toDouble
+        val slen = Statistics.stdev(summPerProj, summ2PerProj, methodsPerProj)
+        
+        println("done! %6.4f %d %d %d %d %f %f %f %f %4.1f s".
+            format(result.r, dh, methodsPerProj, rawPerEntry, strippedPerEntry, um, sm, ulen, slen, dt / 1000.0))
 
         totalt += dt
       }

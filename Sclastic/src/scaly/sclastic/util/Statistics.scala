@@ -58,7 +58,7 @@ object Statistics {
     
     val means = (sumsu._1 / n,sumsu._2 / n)  
     println("methods: "+n)
-    println("mean cc: %-4.1f len: %-4.1f".format(means._1,means._2))
+    println("mean cc: %-6.4f len: %-6.4f".format(means._1,means._2))
     
     // Pass 1
     val lines1 = Source.fromFile(reportFileName).getLines
@@ -77,7 +77,7 @@ object Statistics {
     }
 
     val vars = (sumsv._1 / (n-1), sumsv._2 / (n-1))
-    println("var cc: %-4.1f len: %-4.1f".format(vars._1,vars._2))
+    println("var cc: %-6.3f len: %-6.3f".format(vars._1,vars._2))
     
     // Pass 2    
     val lines2 = Source.fromFile(reportFileName).getLines
@@ -185,5 +185,7 @@ object Statistics {
   def sqr(a: Double) = a * a
   
   def sqrt(a: Double) = Math.sqrt(a)
+  
+  def stdev(sum: Double, sumsq: Double, n: Int) = sqrt((sumsq - sqr(sum)/n) / (n-1))
 
 }

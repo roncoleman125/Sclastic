@@ -388,7 +388,7 @@ object Parser {
         case "if" | /*"for" |*/ "while" =>
           true
           
-        case "&&" | "||" =>
+        case "&&" | "||" /*| "==" | "!="*/ =>
           true
           
         case "case" if(k < tokens.size-1 && tokens(k+1) != "class") =>

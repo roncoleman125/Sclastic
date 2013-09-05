@@ -1,6 +1,6 @@
 root /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/github
-report /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/report.txt
+report /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/report-noscala.txt
 workdir /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/
 hofdb /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/github-hofs.txt
 lint false
-plot bscat.png
+plot bscat-noscala.png

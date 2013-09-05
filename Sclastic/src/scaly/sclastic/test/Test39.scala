@@ -19,6 +19,8 @@ class Test39 {
         
       Config.settings("debug") = "true"
         
+      Config.loadConfig("configs/github-config.txt")
+        
       val methods = Sclastic.estimate(testName)
       
       CompilerHelper.report(methods)
