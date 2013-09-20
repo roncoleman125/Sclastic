@@ -42,6 +42,7 @@ import scaly.sclastic.util.Statistics
 import scaly.sclastic.util.FileWalker
 import scaly.sclastic.compiler.MethodsCompiler
 import scaly.sclastic.util.Lint
+import scaly.sclastic.compiler.Parser
 
 /** This object is the main driver of the long running experiment. */
 object Runner { 
@@ -239,7 +240,7 @@ object Runner {
     // big to fit in memory
     val r = Statistics.correlFile(report)
     
-    println("hofs: %d / %d".format(Lint.count,Lint.attempts))
+    println("hofs: %d / %d %d %d".format(Lint.count,Lint.attempts,Parser.hard,Parser.soft))
     
     println("r: "+r)
     

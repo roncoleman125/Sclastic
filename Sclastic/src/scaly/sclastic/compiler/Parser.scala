@@ -47,6 +47,10 @@ object Parser {
 
   var ovride = false
   
+  var hard = 0
+  
+  var soft = 0 
+  
   /** Parses the lines into elementary parse constructs as pass #1 */
   def parse(path: String, lines: List[String]): List[ParseInfo] = {       
     nest = 0
@@ -386,12 +390,15 @@ object Parser {
       
       token match {
         case "if" | /*"for" |*/ "while" =>
+          hard += 1
           true
           
         case "&&" | "||" /*| "==" | "!="*/ =>
+          hard += 1
           true
           
         case "case" if(k < tokens.size-1 && tokens(k+1) != "class") =>
+          hard += 1
           true
           
 //        case            
@@ -415,7 +422,12 @@ object Parser {
 //          true
           
         case _ =>
-          ishof(k,tokens)
+          val issoft = ishof(k,tokens)
+          
+          if(issoft)
+            soft += 1
+          
+          issoft
 //          false
       }
     }
