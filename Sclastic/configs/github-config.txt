@@ -4,3 +4,7 @@ workdir /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/
 hofdb /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/github-hofs.txt
 lint false
 plot bscat.png
+imports /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/report-imports-uniq.txt
+imports-raw /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/report-imports.txt
+pkgs /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/report-pkgs-uniq.txt
+structs /Users/roncoleman125/Marist/Research/ScalaComplexity/projects/report-structs-uniq.txt

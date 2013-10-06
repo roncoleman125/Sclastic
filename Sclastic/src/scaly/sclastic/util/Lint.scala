@@ -122,9 +122,8 @@ object Lint {
     count += point
   }
   
-  val report = Config.settings("workdir") + "lint.txt"
-  
-  val out = new PrintWriter(new File(report))
+  val hofsReport = Config.settings("workdir") + "report-hofs.txt"
+  val outHofs = new PrintWriter(new File(hofsReport))
   
   val HOFBOOL = """.*=>\s*Boolean.*""".r
   
@@ -135,11 +134,27 @@ object Lint {
       case Some(hof) =>
         count += 1
         
-        out.println("%s#%s#%s".format(name, line, path))
-        out.flush
+        outHofs.println("%s#%s#%s".format(name, line, path))
+        outHofs.flush
 
       case None =>
     }
+  }
+  
+  val importsReport = Config.settings("workdir") + "report-imports.txt"
+  val outImports = new PrintWriter(new File(importsReport))
+  
+  def reportImport(path: String, name: String) {
+    outImports.println(name)
+    outImports.flush
+  }
+  
+  val pkgsReport = Config.settings("workdir") + "report-pkgs.txt"
+  val outPkgs = new PrintWriter(new File(pkgsReport))
+  
+  def reportPkg(path: String, name: String) {
+    outPkgs.println(name)
+    outPkgs.flush
   }
         
 //  val TYPE = 0

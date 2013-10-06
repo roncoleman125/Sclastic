@@ -86,9 +86,15 @@ object Parser {
 
         case _ =>            
           head(tokens(0).trim) match {
+            case "import" =>
+              val name = tokensUnfluffed(1).trim
+              
+              Lint.reportImport(path, name)
+              
+              db ++ updateNest(line,lineno)
             
             case "package" if tokens.size >= 2 =>
-              parsePkg(line,lineno,db)
+              parsePkg(path,line,lineno,db)
 
             case "class" | "trait" | "object" if tokens.size >= 2 =>
               val name = tokens(1)
@@ -434,7 +440,7 @@ object Parser {
     num
   }
 
-  def parsePkg(line: String, lineno: Int, db: List[ParseInfo]): List[ParseInfo] = {
+  def parsePkg(path: String, line: String, lineno: Int, db: List[ParseInfo]): List[ParseInfo] = {
     val pattern2 = """\s*package\s*\$\{(.+)\}\s*\{""".r
     
     val pattern1 = """\s*package\s*(.+)\s*\{""".r
@@ -444,6 +450,7 @@ object Parser {
     line match {
       case pattern2(name) =>
         pkg = if (pkg.length != 0) pkg + "." + name else "$" + name
+        Lint.reportPkg(path, pkg)
         
         val simplerSpec = "package " + name +  " {"
         
@@ -451,11 +458,13 @@ object Parser {
         
       case pattern1(name) =>
         pkg = if (pkg.length != 0) pkg + "." + name else name
+        Lint.reportPkg(path, pkg)
         
       	db ++ List(ParseInfo(pkg, struct, DEMARK + "package:" + name, lineno)) ++ updateNest(line, lineno)
       
       case pattern0(name) =>
         pkg = if (pkg.length != 0) pkg + "." + name else name
+        Lint.reportPkg(path, pkg)
         
         db
         

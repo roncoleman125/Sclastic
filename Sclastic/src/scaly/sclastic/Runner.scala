@@ -132,9 +132,9 @@ object Runner {
               methods.foreach { method =>
                 val m = method.m
                 val len = method.len
-                val name = method.name
-                val struct = method.struct
-                val path = method.path
+                val name = cover(method.name)
+                val struct = cover(method.struct)
+                val path = cover(method.path)
                 
                 if (len > 0) {
                   out.println("| %2d %3d %18.18s %20.20s %s %s".format(m, len, name, struct, path, input))
@@ -295,4 +295,6 @@ object Runner {
         null
     }
   }
+  
+  def cover(name: String): String = if(name == null || name.trim.length == 0) "NULL" else name
 }
