@@ -1,7 +1,8 @@
 Sclastic
 ========
-|Info|Scala compiler kit for estimating the complexity of Scala source|
-|Author|Ron Coleman|
+Scala compiler kit for estimating the complexity of Scala source.
+
+Author: Ron Coleman
 
 About
 =====
