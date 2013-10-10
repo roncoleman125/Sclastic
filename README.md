@@ -11,10 +11,6 @@ for estimating the cyclomatic complexity (M) and lines of code (LOC)
 of Scala source. The core is focused on processing a portfolio of Scala projects compressed in .zip formats
 downloaded from GitHub, Inc.
 
-So if you're looking for a quick-and-easy way to estimate the complexity of some Scala source, this is not
-necessarily the right place. Yet the tools of the kit are here for such an analysis. You'll just
-need to compose them and interpret the output for your particular purposes.
-
 Theory of operation
 -------------------
 Sclastic estimates, M, the [cyclomatic complexity](http://www.literateprogramming.com/mccabe.pdf) given as
@@ -24,16 +20,21 @@ Sclastic estimates, M, the [cyclomatic complexity](http://www.literateprogrammin
 where pi is the number of decision points of a method.
 
 To estimate pi, Sclastic counts "hard" and "soft" decision points (dps). The hard dps are if, while, case-match, etc.
-statements. The signatures of hard dps are knowable in advance since they are "hard-coded" into Scala.
+statements.
 
 The signatures of soft dps are "predicate contexts," that is, higher-order functions that take
-Boolean returning function objects. Higher-order functions like filter, count, compare, etc. are some examples
+Boolean returning function objects, be they named or anonymous (i.e., lambdas).
+Higher-order functions like filter, count, compare, etc. are some examples
 of predicate contexts
 The challenge is the signatures of predicate contexts, practically speaking, can only be "learned" from the input.
-Sclastic stores these in a database which is really just a flat file, which is then consulted
-when counting for decision points.
+Sclastic stores the signatures that it discovers in a database, i.e., the "book," which is then consulted
+when counting soft dps.
 
-To estimate the "miss soft" rate we have
+It may be necessary to estimate the
+probability that the signatures of some predicate are not in the book (i.e., the "soft miss" rate)
+since references to imports may not
+be in the portfolio of projects under analysis.
+To estimate the miss soft rate we have
 
     P(soft miss) = k x w
 
