@@ -16,7 +16,7 @@ object MDL {
 
     // Analyze each configuration
     args.foreach { path =>
-      println(path + "\n----------------------")
+      println(path)
 
       // Get the models and process each one
       val models = Source.fromFile(path).getLines.toList
@@ -55,8 +55,8 @@ object MDL {
             // Compute MDL
             val mdl = lofh + lofdh
 
-            println(form + " => " + formt)
-            println("\t%4.2f %3d %4d %5.1f %5.1f\n".format(r2, lofh, b, lofdh, mdl))
+            //println(form + " => " + formt)
+            println("\t%4.2f %3d %4d %5.1f %5.1f".format(r2, lofh, b, lofdh, mdl))
         }
       }
     }
