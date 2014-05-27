@@ -1,5 +1,8 @@
 package scaly.sclastic.util
 
+import scaly.sclastic.util
+import scala.io.Source
+
 object RankStatistics {
   val PTILE_25 = 0
   val PTILE_50 = 1
@@ -63,7 +66,33 @@ object RankStatistics {
   }
   
   def main(args: Array[String]): Unit = {
-    test01
+    val config = Config.loadConfig(args(0))
+    
+    val report = config("report")
+    
+    val lines = Source.fromFile(report).getLines().toList
+    
+    var indx = 0
+    val xs = Source.fromFile(report).getLines().foldLeft(List[Double]()) { (xs, line) =>
+      indx += 1
+      if(line.startsWith("|")) {
+        println(indx+": "+line)
+        val values = line.split("\\s+")
+        xs ++ List(values(1).toDouble)
+      }
+      else
+        xs
+    }
+    
+    println("loading lens")
+    val ys = lines.foldLeft(List[Double]()) { (ys, line) =>
+      if(line.startsWith("|")) {
+        val values = line.split("\\s+")
+        ys ++ List(values(2).toDouble)
+      }
+      else
+        ys
+    }
   }
   
   /** Test data from Conover (1980) p. 252-253 */
