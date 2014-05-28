@@ -6,24 +6,49 @@ import scala.collection.mutable.Map
 
 object StreamRankStatistics {
   def main(args:Array[String]): Unit = {
+    val xs = args(1)
+    val ys = args(2)
+    
     val config = Config.loadConfig(args(0))
     
     val dir = config("workdir")
     
-    val xsRanks = getRanks(dir+"x-uniq.txt",dir+"x-sorted.txt")
+    val xsRanks = getRanks(dir+xs+"-uniq.txt",dir+xs+"-sorted.txt")
     
     println("*** xs")
     xsRanks.foreach { p =>
       println(p._1+" "+p._2)
       }
     
-    val ysRanks = getRanks(dir+"y-uniq.txt",dir+"y-sorted.txt")
+    val ysRanks = getRanks(dir+ys+"-uniq.txt",dir+ys+"-sorted.txt")
     
-    println("*** ys")
-    ysRanks.foreach { p =>
-      println(p._1+" "+p._2)
+//    println("*** ys")
+//    ysRanks.foreach { p =>
+//      println(p._1+" "+p._2)
+//    }
+    
+    val report = config("report")
+    val results = Source.fromFile(dir+"xy.txt").getLines().foldLeft(Tuple2(0.0,0)) { (sum,line) =>
+      println(sum._2+": "+line)
+      if(line.startsWith("|")) {
+        val values = line.split("\\s+")
+        
+        val xi = values(1).toInt
+        val rxi = xsRanks(xi)
+        
+        val yi = values(2).toInt
+        val ryi = ysRanks(yi)
+        
+        val t = sum._1 + (rxi - ryi) * (rxi - ryi)
+        val n = sum._2 + 1
+        (t,n)
+      }
+      else
+        sum
     }
-
+    
+    val rho = 1 - 6 * results._1 / (results._2 * (results._2 * results._2 - 1))
+    println("rho = "+rho)
   }
   
   def getRanks(pathUniqs: String,pathSorted: String): Map[Int,Double] = {
@@ -49,7 +74,7 @@ object StreamRankStatistics {
 
       if(p != u) {
         val rank = rankSum / count
-        println("u=%d rank=%f ranksum=%f count=%d".format(u,rank,rankSum,count))
+//        println("u=%d rank=%f ranksum=%f count=%d".format(u,rank,rankSum,count))
         
         ranks(u) = rank
         count = 0
@@ -69,7 +94,7 @@ object StreamRankStatistics {
     }
     
     val rank = rankSum / count
-    println("u=%d rank=%f ranksum=%f count=%d".format(u,rank,rankSum,count))
+//    println("u=%d rank=%f ranksum=%f count=%d".format(u,rank,rankSum,count))
     
     ranks(u) = rank  
     
