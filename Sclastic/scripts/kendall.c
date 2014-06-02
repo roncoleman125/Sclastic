@@ -46,6 +46,8 @@
 #define MAX_OBSERVATIONS 224000
 #define BUFSIZE 256
 
+int cmpfunc (const void * a, const void * b);
+
 int main(int argc, char** argv) {
   if(argc <= 1) {
     printf("usage: kendall sorted-records-file\n");
@@ -53,8 +55,8 @@ int main(int argc, char** argv) {
   }
 
   // Allocate storage
-  int* x = (int*)malloc(MAX_OBSERVATIONS*sizeof(int));
-  int* y = (int*)malloc(MAX_OBSERVATIONS*sizeof(int));
+  int* xs = (int*)malloc(MAX_OBSERVATIONS*sizeof(int));
+  int* ys = (int*)malloc(MAX_OBSERVATIONS*sizeof(int));
 
   // Read in the records
   char* line = malloc(BUFSIZE);
@@ -72,8 +74,8 @@ int main(int argc, char** argv) {
     int a, b;
     sscanf(line,"%d %d",&a, &b);
     //printf("%d %d\n",a,b);   
-    x[indx] = a;
-    y[indx] = b;
+    xs[indx] = a;
+    ys[indx] = b;
     indx++;
 
     if(indx >= MAX_OBSERVATIONS) {
@@ -84,17 +86,17 @@ int main(int argc, char** argv) {
 
   printf("processed %lu record(s)\n",indx);
 
-  // Compute concordant and discordant counts
+  // Compute condordant and discordant counts
   // See https://www.youtube.com/watch?v=oXVxaSoY94k
   unsigned long nc = 0;
   unsigned long nd = 0;
   for(int i=0; i < indx; i++) {
     printf("%d\n",i);
-    int xa = x[i];
-    int ya = y[i];
+    int xa = xs[i];
+    int ya = ys[i];
     for(int j=i; j < indx; j++) {
-      int xb = x[j];
-      int yb = y[j];
+      int xb = xs[j];
+      int yb = ys[j];
 
       if(xa == xb)
         continue;
@@ -116,6 +118,48 @@ int main(int argc, char** argv) {
   double tau = (double) (nc - nd) / (indx * (indx - 1) / 2);
   printf("tau = %lf\n",tau);
 
+  // Calculate the MADM
+  float medianx = -1;
+  float mediany = -1;
+  if(indx % 2 != 0) {
+    medianx = xs[indx/2];
+    mediany = ys[indx/2];
+  }
+  else {
+    medianx = (xs[indx/2] + xs[indx/2-1]) / 2.;
+    mediany = (ys[indx/2] + ys[indx/2-1]) / 2.;
+  }
+
+  float* dxs = (float*)malloc(indx*sizeof(float));
+  float* dys = (float*)malloc(indx*sizeof(float));
+
+  for(int i=0; i < indx; i++) {
+    dxs[i] = abs(medianx - xs[i]);
+    dys[i] = abs(mediany - ys[i]);
+  }
+
+  qsort(dxs,indx,sizeof(float),cmpfunc);
+  qsort(dys,indx,sizeof(float),cmpfunc);
+
+  float madmx = -1;
+  float madmy = -1;
+  if(indx % 2 != 0) {
+    madmx = dxs[indx/2];
+    madmy = dys[indx/2];
+  }
+  else {
+    madmx = (dxs[indx/2] + dxs[indx/2-1]);
+    madmy = (dys[indx/2] + dys[indx/2-1]);
+  }
+
+  printf("MAMD(x) = %6f\n",madmx);
+  printf("MAMD(y) = %6f\n",madmy);
+
   exit(0);
+}
+
+int cmpfunc (const void * a, const void * b)
+{
+   return (int) ( *(float*)a - *(float*)b );
 }
 

@@ -33,6 +33,7 @@ import javax.imageio.ImageIO
 import java.io.File
 import scala.util.Random
 import java.awt.Color
+import java.awt.Font
 
 /**
  * This object reads the main configuration report file and generates a
@@ -40,14 +41,16 @@ import java.awt.Color
  * @author Ron Coleman
  */
 object BackScatter {
-  val SIZE_X = 500
-  val SIZE_Y = 500
+  val SIZE_X = 250
+  val SIZE_Y = 250
+  val BORDER_X = 0
+  val BORDER_Y = 0
   
   def main(args: Array[String]): Unit = {
 
     val config = Config.loadConfig(args(0))
     
-    val bimg =	new BufferedImage(SIZE_X,SIZE_Y,BufferedImage.TYPE_INT_RGB);
+    val bimg =	new BufferedImage(SIZE_X+BORDER_X,SIZE_Y+BORDER_Y,BufferedImage.TYPE_INT_RGB);
     
     val g2d = bimg.createGraphics()
     
@@ -56,6 +59,8 @@ object BackScatter {
 	g2d.fillRect(0,0,SIZE_X,SIZE_Y);
 	
     g2d.setColor(Color.BLACK)
+    
+    println("loading data from report...")
     
     val report = config("report")
     
@@ -67,6 +72,9 @@ object BackScatter {
     var count = 0
     var summ = 0
     var sumlen = 0
+    
+    println("analyzing...")
+    
     lines.foreach { line =>
       val fields = line.split("\\s+")
       fields(0) match {
@@ -79,9 +87,9 @@ object BackScatter {
           // LOC
           val len = fields(2).toInt
           sumlen += len
-          val y = len + ran.nextDouble - 0.5
+          val y = len + ran.nextDouble - 0.5 + BORDER_Y
           
-          g2d.fillRect((x*10).toInt-1, (y*10).toInt-1, 2, 2);
+          g2d.fillRect((x*5).toInt-1 + BORDER_X, (y*5).toInt-1 + BORDER_Y, 2, 2);
           
           count += 1
           
@@ -90,18 +98,24 @@ object BackScatter {
           
         case _ =>
       }
+      
     }
+          
+//    val font = new Font("Arial", Font.PLAIN, 10);
+//    g2d.setFont(font)
+//    g2d.drawString("25", SIZE_X/2, SIZE_Y/2)
     
-    val cogm = summ / count.toDouble
-    val coglen = sumlen / count.toDouble
+//    val cogm = summ / count.toDouble
+//    val coglen = sumlen / count.toDouble
     
-    g2d.setColor(Color.RED)
-    g2d.fillRect((cogm*10).toInt-4, (coglen*10).toInt-4, 8, 8);
+//    g2d.setColor(Color.RED)
+//    g2d.fillRect((cogm*10).toInt-4, (coglen*10).toInt-4, 8, 8);
 //    g2d.fillRect(200,50,10,10)
     
     val dir = config("workdir")
 
     val dimg = horizontalflip(rotate(bimg,180))
+
     
     val name = config.get("plot").getOrElse("bscat.png")
     
